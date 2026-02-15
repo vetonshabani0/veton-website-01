@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Helvetic Dynamics AG – Transport, Logistics & Vehicle Trade in Switzerland",
+    "description": "Helvetic Dynamics AG in Buchs ZH – Your partner for freight transport, logistics, vehicle trade, auto parts, import/export and courier services in Switzerland.",
+    "keywords": "transport Switzerland, logistics Buchs ZH, freight transport, vehicle trade, auto parts, courier service, import export Switzerland, Helvetic Dynamics AG"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "In Switzerland since 2018",
+    "title": "Reliable Logistics & Transport",
+    "subtitle": "Your Swiss partner for freight transport, vehicle trade and logistics solutions since 2018.",
+    "cta_primary": "Our Services",
+    "cta_secondary": "Get in Touch"
+  },
+  "cta": {
+    "title": "Ready for reliable logistics?",
+    "text": "Contact us today for a free consultation.",
+    "button": "Get a Quote"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Helvetic Dynamics AG",
+    "description": "Since 2018, we have been providing reliable transport and logistics services across Switzerland from our base in Buchs ZH. As a versatile company, we combine freight transport, vehicle trade and courier services under one roof.",
+    "text": "Our focus is on quality, punctuality and personal service. Whether goods transport, vehicle repair or international import and export solutions – we are your reliable partner.",
+    "stats": {
+      "since": "Since",
+      "since_value": "2018",
+      "location": "Location",
+      "location_value": "Buchs ZH",
+      "services_count": "Services",
+      "services_count_value": "6+",
+      "coverage": "Coverage",
+      "coverage_value": "Nationwide"
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title": "What We Offer",
+    "subtitle": "From freight transport to vehicle trade – we deliver comprehensive solutions for your logistics needs.",
+    "items": {
+      "transport": {
+        "title": "Freight Transport",
+        "description": "Reliable transport of all types of goods – nationally and internationally, on time and secure."
+      },
+      "logistics": {
+        "title": "Logistics Services",
+        "description": "Professional logistics solutions for your supply chain, from storage to final delivery."
+      },
+      "autoparts": {
+        "title": "Auto Parts",
+        "description": "Trade in high-quality auto spare parts – fast availability and fair prices."
+      },
+      "vehicles": {
+        "title": "Vehicle Sales & Repair",
+        "description": "Buying and selling vehicles as well as professional repair and maintenance services."
+      },
+      "importexport": {
+        "title": "Import & Export",
+        "description": "International trade services – we take care of your import and export needs."
+      },
+      "courier": {
+        "title": "Courier Services",
+        "description": "Fast and reliable courier and delivery services for your urgent shipments."
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Get in Touch",
+    "subtitle": "Have questions or need a quote? We look forward to hearing from you.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number (optional)",
+      "service": "Select Service",
+      "service_options": {
+        "default": "Please select…",
+        "transport": "Freight Transport",
+        "logistics": "Logistics",
+        "autoparts": "Auto Parts",
+        "vehicles": "Vehicles",
+        "importexport": "Import & Export",
+        "courier": "Courier Service",
+        "other": "Other"
+      },
+      "message": "Your Message",
+      "submit": "Send Message",
+      "success": "Thank you! We will get back to you shortly.",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "address_label": "Address",
+      "address": "Mühlibachstrasse 42, 8107 Buchs ZH",
+      "email_label": "Email",
+      "phone_label": "Phone",
+      "hours_label": "Opening Hours",
+      "hours": "Mon – Fri: 07:00 – 18:00"
+    }
+  },
+  "footer": {
+    "company": "Helvetic Dynamics AG",
+    "tagline": "Your partner for transport & logistics in Switzerland.",
+    "uid": "UID: CHE-269.404.940",
+    "links_title": "Navigation",
+    "legal_title": "Legal",
+    "privacy": "Privacy Policy",
+    "imprint": "Imprint",
+    "terms": "Terms",
+    "copyright": "© 2025 Helvetic Dynamics AG. All rights reserved."
+  }
+}
