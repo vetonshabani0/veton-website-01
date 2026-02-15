@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Helvetic Dynamics AG – Transport, Logistik & Fahrzeughandel in der Schweiz",
+    "description": "Helvetic Dynamics AG in Buchs ZH – Ihr Partner für Gütertransport, Logistik, Fahrzeughandel, Autoersatzteile, Import/Export und Kurierdienste in der Schweiz.",
+    "keywords": "Transport Schweiz, Logistik Buchs ZH, Gütertransport, Fahrzeughandel, Autoersatzteile, Kurierdienst, Import Export Schweiz, Helvetic Dynamics AG"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "language": "Sprache"
+  },
+  "hero": {
+    "badge": "Seit 2018 in der Schweiz",
+    "title": "Zuverlässige Logistik & Transport",
+    "subtitle": "Ihr Schweizer Partner für Gütertransport, Fahrzeughandel und Logistiklösungen seit 2018.",
+    "cta_primary": "Unsere Dienstleistungen",
+    "cta_secondary": "Kontakt aufnehmen"
+  },
+  "cta": {
+    "title": "Bereit für zuverlässige Logistik?",
+    "text": "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung.",
+    "button": "Jetzt anfragen"
+  },
+  "about": {
+    "label": "Über uns",
+    "title": "Helvetic Dynamics AG",
+    "description": "Seit 2018 bieten wir von Buchs ZH aus zuverlässige Transport- und Logistikdienstleistungen in der ganzen Schweiz an. Als vielseitiges Unternehmen vereinen wir Gütertransport, Fahrzeughandel und Kurierdienste unter einem Dach.",
+    "text": "Unser Fokus liegt auf Qualität, Pünktlichkeit und persönlichem Service. Ob Warentransport, Fahrzeugreparatur oder internationale Import- und Exportlösungen – wir sind Ihr verlässlicher Partner.",
+    "stats": {
+      "since": "Seit",
+      "since_value": "2018",
+      "location": "Standort",
+      "location_value": "Buchs ZH",
+      "services_count": "Dienstleistungen",
+      "services_count_value": "6+",
+      "coverage": "Abdeckung",
+      "coverage_value": "Schweizweit"
+    }
+  },
+  "services": {
+    "label": "Dienstleistungen",
+    "title": "Was wir bieten",
+    "subtitle": "Von Gütertransport bis Fahrzeughandel – wir liefern umfassende Lösungen für Ihre logistischen Anforderungen.",
+    "items": {
+      "transport": {
+        "title": "Gütertransport",
+        "description": "Zuverlässiger Transport von Waren aller Art – national und international, termingerecht und sicher."
+      },
+      "logistics": {
+        "title": "Logistikdienstleistungen",
+        "description": "Professionelle Logistiklösungen für Ihre Supply Chain, von der Lagerung bis zur Auslieferung."
+      },
+      "autoparts": {
+        "title": "Autoersatzteile",
+        "description": "Handel mit hochwertigen Autoersatzteilen – schnelle Verfügbarkeit und faire Preise."
+      },
+      "vehicles": {
+        "title": "Fahrzeugverkauf & Reparatur",
+        "description": "Kauf und Verkauf von Fahrzeugen sowie professionelle Reparatur- und Wartungsservices."
+      },
+      "importexport": {
+        "title": "Import & Export",
+        "description": "Internationale Handelsdienstleistungen – wir kümmern uns um Ihre Import- und Exportbedürfnisse."
+      },
+      "courier": {
+        "title": "Kurierdienste",
+        "description": "Schnelle und zuverlässige Kurier- und Zustelldienste für Ihre eiligen Sendungen."
+      }
+    }
+  },
+  "contact": {
+    "label": "Kontakt",
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Haben Sie Fragen oder benötigen Sie ein Angebot? Wir freuen uns auf Ihre Nachricht.",
+    "form": {
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer (optional)",
+      "service": "Dienstleistung wählen",
+      "service_options": {
+        "default": "Bitte wählen…",
+        "transport": "Gütertransport",
+        "logistics": "Logistik",
+        "autoparts": "Autoersatzteile",
+        "vehicles": "Fahrzeuge",
+        "importexport": "Import & Export",
+        "courier": "Kurierdienst",
+        "other": "Sonstiges"
+      },
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "success": "Vielen Dank! Wir melden uns in Kürze bei Ihnen.",
+      "error": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "address_label": "Adresse",
+      "address": "Mühlibachstrasse 42, 8107 Buchs ZH",
+      "email_label": "E-Mail",
+      "phone_label": "Telefon",
+      "hours_label": "Öffnungszeiten",
+      "hours": "Mo – Fr: 07:00 – 18:00"
+    }
+  },
+  "footer": {
+    "company": "Helvetic Dynamics AG",
+    "tagline": "Ihr Partner für Transport & Logistik in der Schweiz.",
+    "uid": "UID: CHE-269.404.940",
+    "links_title": "Navigation",
+    "legal_title": "Rechtliches",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "terms": "AGB",
+    "copyright": "© 2025 Helvetic Dynamics AG. Alle Rechte vorbehalten."
+  }
+}
