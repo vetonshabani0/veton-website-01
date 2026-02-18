@@ -45,6 +45,22 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Lottie Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    // Ensure lottie is available globally
+    window.lottieReady = false;
+    if (typeof lottie !== 'undefined') {
+      window.lottieReady = true;
+    } else {
+      window.addEventListener('load', function() {
+        if (typeof lottie !== 'undefined') {
+          window.lottieReady = true;
+        }
+      });
+    }
+  </script>
 
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
@@ -93,6 +109,19 @@
 </head>
 <body>
 
+  <!-- ========== LOADING SCREEN ========== -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-screen__content">
+      <div class="loading-screen__package-wrapper">
+        <div class="loading-screen__package" id="lottieContainer"></div>
+      </div>
+        <div class="loading-screen__text" id="loadingText">
+          <h1 class="loading-screen__title">HELVETIC DYNAMICS AG</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="container header__inner">
@@ -101,14 +130,50 @@
           <rect width="40" height="40" rx="8" fill="#D42B2B"/>
           <path d="M10 12h8v6h4v-6h8v16h-8v-6h-4v6h-8V12z" fill="#fff"/>
         </svg>
-        <span class="header__logo-text">Helvetic Dynamics</span>
+        <span class="header__logo-text" id="headerLogoText" style="opacity: 0;">HELVETIC DYNAMICS AG</span>
       </a>
 
       <nav class="header__nav" id="mainNav" aria-label="Hauptnavigation">
         <ul class="header__nav-list">
+          <li class="header__nav-lang">
+            <div class="lang-switcher lang-switcher--mobile" id="langSwitcherMobile">
+              <button class="lang-switcher__btn lang-switcher__btn--mobile" aria-expanded="false" aria-haspopup="listbox" aria-label="Sprache wählen">
+                <svg class="lang-switcher__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.5"/>
+                  <ellipse cx="10" cy="10" rx="4" ry="8.5" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M2 7.5h16M2 12.5h16" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span class="lang-switcher__current">DE</span>
+                <svg class="lang-switcher__chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <ul class="lang-switcher__dropdown" role="listbox" aria-label="Verfügbare Sprachen">
+                <li role="option" aria-selected="true"><button class="lang-switcher__option" data-lang="de">Deutsch</button></li>
+                <li role="option" aria-selected="false"><button class="lang-switcher__option" data-lang="en">English</button></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="#hero" class="header__nav-link" data-i18n="nav.home">Startseite</a></li>
           <li><a href="#about" class="header__nav-link" data-i18n="nav.about">Über uns</a></li>
-          <li><a href="#services" class="header__nav-link" data-i18n="nav.services">Dienstleistungen</a></li>
+          <li class="nav-dropdown">
+            <button class="header__nav-link header__nav-link--dropdown" aria-expanded="false" aria-haspopup="true" id="servicesDropdown">
+              <span data-i18n="nav.services">Dienstleistungen</span>
+              <svg class="nav-dropdown__chevron" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown__menu" role="menu" aria-label="Dienstleistungen">
+              <li role="menuitem"><a href="services/transport.html" class="nav-dropdown__link" data-i18n="services.items.transport.title">Gütertransport</a></li>
+              <li role="menuitem"><a href="services/logistics.html" class="nav-dropdown__link" data-i18n="services.items.logistics.title">Logistikdienstleistungen</a></li>
+              <li role="menuitem"><a href="services/autoparts.html" class="nav-dropdown__link" data-i18n="services.items.autoparts.title">Autoersatzteile</a></li>
+              <li role="menuitem"><a href="services/vehicles.html" class="nav-dropdown__link" data-i18n="services.items.vehicles.title">Fahrzeugverkauf & Reparatur</a></li>
+              <li role="menuitem"><a href="services/importexport.html" class="nav-dropdown__link" data-i18n="services.items.importexport.title">Import & Export</a></li>
+              <li role="menuitem"><a href="services/courier.html" class="nav-dropdown__link" data-i18n="services.items.courier.title">Kurierdienste</a></li>
+              <li role="menuitem"><a href="services/moving.html" class="nav-dropdown__link" data-i18n="services.items.moving.title">Umzugsdienste</a></li>
+              <li role="menuitem"><a href="services/realestate.html" class="nav-dropdown__link" data-i18n="services.items.realestate.title">Immobilien</a></li>
+            </ul>
+          </li>
           <li><a href="#contact" class="header__nav-link header__nav-link--cta" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
       </nav>
@@ -187,8 +252,29 @@
           <div class="about__text-col">
             <div class="section-label anim-fade-up" data-i18n="about.label">Über uns</div>
             <h2 class="section-title anim-fade-up" data-i18n="about.title">Helvetic Dynamics AG</h2>
-            <p class="about__description anim-fade-up" data-i18n="about.description">Seit 2018 bieten wir von Buchs ZH aus zuverlässige Transport- und Logistikdienstleistungen in der ganzen Schweiz an. Als vielseitiges Unternehmen vereinen wir Gütertransport, Fahrzeughandel und Kurierdienste unter einem Dach.</p>
-            <p class="about__more anim-fade-up" data-i18n="about.text">Unser Fokus liegt auf Qualität, Pünktlichkeit und persönlichem Service. Ob Warentransport, Fahrzeugreparatur oder internationale Import- und Exportlösungen – wir sind Ihr verlässlicher Partner.</p>
+            <p class="about__description anim-fade-up" data-i18n="about.description">Seit 2018 bieten wir von Buchs ZH aus zuverlässige Transport- und Logistikdienstleistungen in der ganzen Schweiz an. Als Aktiengesellschaft (AG) mit Sitz in Mühlibachstrasse 42, 8107 Buchs ZH, vereinen wir ein breites Spektrum an Dienstleistungen unter einem Dach.</p>
+            <p class="about__more anim-fade-up" data-i18n="about.text">Unser Fokus liegt auf Qualität, Pünktlichkeit und persönlichem Service. Ob Warentransport, Fahrzeugreparatur, Immobilienverwaltung oder internationale Import- und Exportlösungen – wir sind Ihr verlässlicher Partner. Mit über 7 Jahren Erfahrung im Schweizer Markt bieten wir umfassende Lösungen für Ihre logistischen und geschäftlichen Anforderungen.</p>
+            
+            <div class="about__legal anim-fade-up" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <div>
+                  <strong style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);" data-i18n="about.legal.form">Rechtsform</strong>
+                  <p style="margin-top: 0.25rem; font-size: 0.9375rem; color: var(--gray-900);" data-i18n="about.legal.form_value">Aktiengesellschaft (AG)</p>
+                </div>
+                <div>
+                  <strong style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);" data-i18n="about.legal.register">Handelsregister</strong>
+                  <p style="margin-top: 0.25rem; font-size: 0.9375rem; color: var(--gray-900);" data-i18n="about.legal.register_value">CH-020.3.046.307-8</p>
+                </div>
+                <div>
+                  <strong style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);" data-i18n="about.legal.uid">UID / MWST</strong>
+                  <p style="margin-top: 0.25rem; font-size: 0.9375rem; color: var(--gray-900);" data-i18n="about.legal.uid_value">CHE-269.404.940</p>
+                </div>
+                <div>
+                  <strong style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);" data-i18n="about.management.title">Geschäftsleitung</strong>
+                  <p style="margin-top: 0.25rem; font-size: 0.9375rem; color: var(--gray-900);" data-i18n="about.management.member">Spat Fejzulahu</p>
+                </div>
+              </div>
+            </div>
             <div class="about__stats anim-fade-up">
               <div class="stat">
                 <span class="stat__value" data-counter="2018" data-i18n="about.stats.since_value">2018</span>
@@ -199,7 +285,7 @@
                 <span class="stat__label" data-i18n="about.stats.location">Standort</span>
               </div>
               <div class="stat">
-                <span class="stat__value" data-i18n="about.stats.services_count_value">6+</span>
+                <span class="stat__value" data-i18n="about.stats.services_count_value">8+</span>
                 <span class="stat__label" data-i18n="about.stats.services_count">Dienstleistungen</span>
               </div>
               <div class="stat">
@@ -207,6 +293,87 @@
                 <span class="stat__label" data-i18n="about.stats.coverage">Abdeckung</span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ADVANTAGES ========== -->
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <div class="advantages__header">
+          <div class="section-label anim-fade-up" data-i18n="advantages.label">Warum wir</div>
+          <h2 class="section-title anim-fade-up" data-i18n="advantages.title">Ihre Vorteile</h2>
+          <p class="section-subtitle anim-fade-up" data-i18n="advantages.subtitle">Was uns auszeichnet und warum Kunden uns vertrauen</p>
+        </div>
+
+        <div class="advantages__grid">
+          <div class="advantage-card anim-fade-up" data-anim-delay="0">
+            <div class="advantage-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4L6 14v10c0 11.046 7.5 21.74 18 24.5 10.5-2.76 18-13.454 18-24.5V14L24 4z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M18 22l6 6 12-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="advantage-card__title" data-i18n="advantages.items.quality.title">Qualität & Zuverlässigkeit</h3>
+            <p class="advantage-card__desc" data-i18n="advantages.items.quality.description">Über 7 Jahre Erfahrung garantieren höchste Qualitätsstandards und termingerechte Lieferungen.</p>
+          </div>
+
+          <div class="advantage-card anim-fade-up" data-anim-delay="100">
+            <div class="advantage-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M24 6v6M24 36v6M6 24h6M36 24h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="advantage-card__title" data-i18n="advantages.items.network.title">Schweizweites Netzwerk</h3>
+            <p class="advantage-card__desc" data-i18n="advantages.items.network.description">Umfassende Abdeckung in der ganzen Schweiz mit zuverlässigen Partnern und effizienten Routen.</p>
+          </div>
+
+          <div class="advantage-card anim-fade-up" data-anim-delay="200">
+            <div class="advantage-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 24h24M24 12v24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="advantage-card__title" data-i18n="advantages.items.flexibility.title">Flexible Lösungen</h3>
+            <p class="advantage-card__desc" data-i18n="advantages.items.flexibility.description">Massgeschneiderte Dienstleistungen für jeden Bedarf – von kleinen Sendungen bis zu grossen Projekten.</p>
+          </div>
+
+          <div class="advantage-card anim-fade-up" data-anim-delay="300">
+            <div class="advantage-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="12" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M20 20h8M20 24h12M20 28h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="advantage-card__title" data-i18n="advantages.items.technology.title">Moderne Technologie</h3>
+            <p class="advantage-card__desc" data-i18n="advantages.items.technology.description">Innovative Systeme für Tracking, Planung und Kommunikation für optimale Transparenz.</p>
+          </div>
+
+          <div class="advantage-card anim-fade-up" data-anim-delay="400">
+            <div class="advantage-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 20a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3 class="advantage-card__title" data-i18n="advantages.items.support.title">Persönlicher Service</h3>
+            <p class="advantage-card__desc" data-i18n="advantages.items.support.description">Dedizierte Betreuung und schnelle Reaktionszeiten – wir sind immer für Sie da.</p>
+          </div>
+
+          <div class="advantage-card anim-fade-up" data-anim-delay="500">
+            <div class="advantage-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6L12 18h8v18h8V18h8L24 6z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 42h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="advantage-card__title" data-i18n="advantages.items.experience.title">Bewährte Expertise</h3>
+            <p class="advantage-card__desc" data-i18n="advantages.items.experience.description">Langjährige Erfahrung in Transport, Logistik und Fahrzeughandel mit nachweislichem Erfolg.</p>
           </div>
         </div>
       </div>
@@ -220,11 +387,11 @@
             <div class="section-label anim-fade-up" data-i18n="services.label">Dienstleistungen</div>
             <h2 class="section-title anim-fade-up" data-i18n="services.title">Was wir bieten</h2>
           </div>
-          <p class="section-subtitle anim-fade-up" data-i18n="services.subtitle">Von Gütertransport bis Fahrzeughandel – wir liefern umfassende Lösungen für Ihre logistischen Anforderungen.</p>
+          <p class="section-subtitle anim-fade-up" data-i18n="services.subtitle">Von Gütertransport bis Immobilienverwaltung – wir liefern umfassende Lösungen für Ihre logistischen und geschäftlichen Anforderungen.</p>
         </div>
 
         <div class="services__grid">
-          <article class="service-card anim-fade-up">
+          <a href="services/transport.html" class="service-card anim-fade-up" style="text-decoration: none; color: inherit;">
             <div class="service-card__img-wrap">
               <img src="https://images.pexels.com/photos/2449454/pexels-photo-2449454.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
                    alt="Gütertransport – Lastwagen auf Autobahn"
@@ -243,9 +410,9 @@
               <h3 class="service-card__title" data-i18n="services.items.transport.title">Gütertransport</h3>
               <p class="service-card__desc" data-i18n="services.items.transport.description">Zuverlässiger Transport von Waren aller Art – national und international, termingerecht und sicher.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="service-card anim-fade-up anim-delay-1">
+          <a href="services/logistics.html" class="service-card anim-fade-up anim-delay-1" style="text-decoration: none; color: inherit;">
             <div class="service-card__img-wrap">
               <img src="https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
                    alt="Professionelle Logistikdienstleistungen – Lager"
@@ -264,9 +431,9 @@
               <h3 class="service-card__title" data-i18n="services.items.logistics.title">Logistikdienstleistungen</h3>
               <p class="service-card__desc" data-i18n="services.items.logistics.description">Professionelle Logistiklösungen für Ihre Supply Chain, von der Lagerung bis zur Auslieferung.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="service-card anim-fade-up anim-delay-2">
+          <a href="services/autoparts.html" class="service-card anim-fade-up anim-delay-2" style="text-decoration: none; color: inherit;">
             <div class="service-card__img-wrap">
               <img src="https://images.pexels.com/photos/13065692/pexels-photo-13065692.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
                    alt="Autoersatzteile und Mechaniker"
@@ -284,11 +451,11 @@
               <h3 class="service-card__title" data-i18n="services.items.autoparts.title">Autoersatzteile</h3>
               <p class="service-card__desc" data-i18n="services.items.autoparts.description">Handel mit hochwertigen Autoersatzteilen – schnelle Verfügbarkeit und faire Preise.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="service-card anim-fade-up">
+          <a href="services/vehicles.html" class="service-card anim-fade-up" style="text-decoration: none; color: inherit;">
             <div class="service-card__img-wrap">
-              <img src="https://images.pexels.com/photos/7387470/pexels-photo-7387470.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
+              <img src="https://images.cdn.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/audi-a4-rt-2015-0024_0.jpg?itok=7cJ1PI3F"
                    alt="Fahrzeugverkauf – Autohaus"
                    loading="lazy"
                    class="service-card__img">
@@ -305,9 +472,9 @@
               <h3 class="service-card__title" data-i18n="services.items.vehicles.title">Fahrzeugverkauf & Reparatur</h3>
               <p class="service-card__desc" data-i18n="services.items.vehicles.description">Kauf und Verkauf von Fahrzeugen sowie professionelle Reparatur- und Wartungsservices.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="service-card anim-fade-up anim-delay-1">
+          <a href="services/importexport.html" class="service-card anim-fade-up anim-delay-1" style="text-decoration: none; color: inherit;">
             <div class="service-card__img-wrap">
               <img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
                    alt="Import und Export – Frachtcontainer"
@@ -325,11 +492,11 @@
               <h3 class="service-card__title" data-i18n="services.items.importexport.title">Import & Export</h3>
               <p class="service-card__desc" data-i18n="services.items.importexport.description">Internationale Handelsdienstleistungen – wir kümmern uns um Ihre Import- und Exportbedürfnisse.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="service-card anim-fade-up anim-delay-2">
+          <a href="services/courier.html" class="service-card anim-fade-up anim-delay-2" style="text-decoration: none; color: inherit;">
             <div class="service-card__img-wrap">
-              <img src="https://images.pexels.com/photos/7363098/pexels-photo-7363098.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
+              <img src="https://vslworldwide.com/wp-content/uploads/2023/02/courier-1.png"
                    alt="Kurierdienst – Paketlieferung"
                    loading="lazy"
                    class="service-card__img">
@@ -347,7 +514,50 @@
               <h3 class="service-card__title" data-i18n="services.items.courier.title">Kurierdienste</h3>
               <p class="service-card__desc" data-i18n="services.items.courier.description">Schnelle und zuverlässige Kurier- und Zustelldienste für Ihre eiligen Sendungen.</p>
             </div>
-          </article>
+          </a>
+
+          <a href="services/moving.html" class="service-card anim-fade-up" style="text-decoration: none; color: inherit;">
+            <div class="service-card__img-wrap">
+              <img src="https://images.pexels.com/photos/4483608/pexels-photo-4483608.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
+                   alt="Umzugsdienste – Umzugswagen"
+                   loading="lazy"
+                   class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="12" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2.5"/>
+                  <path d="M12 20h24M12 28h24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                  <circle cx="14" cy="40" r="3.5" stroke="currentColor" stroke-width="2.5"/>
+                  <circle cx="34" cy="40" r="3.5" stroke="currentColor" stroke-width="2.5"/>
+                  <path d="M20 8v8M28 8v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title" data-i18n="services.items.moving.title">Umzugsdienste</h3>
+              <p class="service-card__desc" data-i18n="services.items.moving.description">Professionelle Umzugsdienstleistungen für Privat- und Geschäftskunden – sorgfältig, zuverlässig und termingerecht.</p>
+            </div>
+          </a>
+
+          <a href="services/realestate.html" class="service-card anim-fade-up anim-delay-1" style="text-decoration: none; color: inherit;">
+            <div class="service-card__img-wrap">
+              <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&q=80"
+                   alt="Immobilien – Gebäude"
+                   loading="lazy"
+                   class="service-card__img">
+            </div>
+            <div class="service-card__body">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 20l16-12 16 12v20H8V20z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                  <path d="M24 8v32M8 20h32" stroke="currentColor" stroke-width="2.5"/>
+                  <circle cx="18" cy="28" r="2" fill="currentColor"/>
+                  <circle cx="30" cy="28" r="2" fill="currentColor"/>
+                </svg>
+              </div>
+              <h3 class="service-card__title" data-i18n="services.items.realestate.title">Immobilien</h3>
+              <p class="service-card__desc" data-i18n="services.items.realestate.description">Erwerb, Verwaltung und Verkauf von Immobilien, inklusive Sanierung, Renovation und Neubau.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -401,6 +611,8 @@
                 <option value="vehicles" data-i18n="contact.form.service_options.vehicles">Fahrzeuge</option>
                 <option value="importexport" data-i18n="contact.form.service_options.importexport">Import & Export</option>
                 <option value="courier" data-i18n="contact.form.service_options.courier">Kurierdienst</option>
+                <option value="moving" data-i18n="contact.form.service_options.moving">Umzugsdienste</option>
+                <option value="realestate" data-i18n="contact.form.service_options.realestate">Immobilien</option>
                 <option value="other" data-i18n="contact.form.service_options.other">Sonstiges</option>
               </select>
             </div>
@@ -440,7 +652,7 @@
                 </div>
                 <div>
                   <strong data-i18n="contact.info.phone_label">Telefon</strong>
-                  <p><a href="tel:+41000000000">+41 XX XXX XX XX</a></p>
+                  <p><a href="tel:+41445567090">+41 44 556 70 90</a></p>
                 </div>
               </div>
               <div class="contact__info-item">
@@ -496,10 +708,8 @@
       <div class="footer__links">
         <h4 data-i18n="footer.legal_title">Rechtliches</h4>
         <ul>
-          <li><a href="#" data-i18n="footer.privacy">Datenschutz</a></li>
-          <li><a href="#" data-i18n="footer.imprint">Impressum</a></li>
-          <li><a href="#" data-i18n="footer.terms">AGB</a></li>
-        </ul>
+          <li><a href="impressum.html" data-i18n="footer.imprint">Impressum</a></li>
+          </ul>
       </div>
     </div>
     <div class="footer__bottom">

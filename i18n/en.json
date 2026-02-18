@@ -26,47 +26,182 @@
   "about": {
     "label": "About Us",
     "title": "Helvetic Dynamics AG",
-    "description": "Since 2018, we have been providing reliable transport and logistics services across Switzerland from our base in Buchs ZH. As a versatile company, we combine freight transport, vehicle trade and courier services under one roof.",
-    "text": "Our focus is on quality, punctuality and personal service. Whether goods transport, vehicle repair or international import and export solutions – we are your reliable partner.",
+    "description": "Since 2018, we have been providing reliable transport and logistics services across Switzerland from our base in Buchs ZH. As a public limited company (AG) located at Mühlibachstrasse 42, 8107 Buchs ZH, we combine a wide range of services under one roof.",
+    "text": "Our focus is on quality, punctuality and personal service. Whether goods transport, vehicle repair, real estate management or international import and export solutions – we are your reliable partner. With over 7 years of experience in the Swiss market, we offer comprehensive solutions for your logistics and business needs.",
+    "legal": {
+      "form": "Legal Form",
+      "form_value": "Public Limited Company (AG)",
+      "register": "Commercial Register",
+      "register_value": "CH-020.3.046.307-8",
+      "uid": "UID / VAT",
+      "uid_value": "CHE-269.404.940",
+      "capital": "Capital",
+      "capital_value": "CHF 100,000",
+      "founded": "Founded",
+      "founded_value": "July 20, 2018"
+    },
+    "management": {
+      "title": "Management",
+      "member": "Spat Fejzulahu"
+    },
     "stats": {
       "since": "Since",
       "since_value": "2018",
       "location": "Location",
       "location_value": "Buchs ZH",
       "services_count": "Services",
-      "services_count_value": "6+",
+      "services_count_value": "8+",
       "coverage": "Coverage",
       "coverage_value": "Nationwide"
+    }
+  },
+  "advantages": {
+    "label": "Why Us",
+    "title": "Your Advantages",
+    "subtitle": "What sets us apart and why customers trust us",
+    "items": {
+      "quality": {
+        "title": "Quality & Reliability",
+        "description": "Over 7 years of experience guarantee the highest quality standards and timely deliveries."
+      },
+      "network": {
+        "title": "Nationwide Network",
+        "description": "Comprehensive coverage throughout Switzerland with reliable partners and efficient routes."
+      },
+      "flexibility": {
+        "title": "Flexible Solutions",
+        "description": "Tailored services for every need – from small shipments to large projects."
+      },
+      "technology": {
+        "title": "Modern Technology",
+        "description": "Innovative systems for tracking, planning and communication for optimal transparency."
+      },
+      "support": {
+        "title": "Personal Service",
+        "description": "Dedicated support and fast response times – we're always there for you."
+      },
+      "experience": {
+        "title": "Proven Expertise",
+        "description": "Years of experience in transport, logistics and vehicle trade with proven success."
+      }
     }
   },
   "services": {
     "label": "Services",
     "title": "What We Offer",
-    "subtitle": "From freight transport to vehicle trade – we deliver comprehensive solutions for your logistics needs.",
+    "subtitle": "From freight transport to real estate management – we deliver comprehensive solutions for your logistics and business needs.",
     "items": {
       "transport": {
         "title": "Freight Transport",
-        "description": "Reliable transport of all types of goods – nationally and internationally, on time and secure."
+        "description": "Reliable transport of all types of goods – nationally and internationally, on time and secure.",
+        "page_title": "Freight Transport – Helvetic Dynamics AG",
+        "page_description": "Professional freight transport throughout Switzerland. National and international transport solutions for all types of goods.",
+        "details": "We offer reliable transport of all types of goods, both nationally and internationally. Our fleet and network enable timely and secure deliveries.",
+        "features": [
+          "National and international transport",
+          "All types of goods",
+          "Timely delivery",
+          "Insured transport",
+          "Flexible pickup and delivery times"
+        ]
       },
       "logistics": {
         "title": "Logistics Services",
-        "description": "Professional logistics solutions for your supply chain, from storage to final delivery."
+        "description": "Professional logistics solutions for your supply chain, from storage to final delivery.",
+        "page_title": "Logistics Services – Helvetic Dynamics AG",
+        "page_description": "Comprehensive logistics solutions for your supply chain. From storage to final delivery.",
+        "details": "Our logistics services cover the entire supply chain – from storage and picking to final delivery. We optimize your processes for maximum efficiency.",
+        "features": [
+          "Storage and picking",
+          "Supply chain management",
+          "Inventory optimization",
+          "Just-in-time deliveries",
+          "E-commerce logistics"
+        ]
       },
       "autoparts": {
         "title": "Auto Parts",
-        "description": "Trade in high-quality auto spare parts – fast availability and fair prices."
+        "description": "Trade in high-quality auto spare parts – fast availability and fair prices.",
+        "page_title": "Auto Parts – Helvetic Dynamics AG",
+        "page_description": "Trade in high-quality auto spare parts. Fast availability and fair prices for all vehicle types.",
+        "details": "Our auto parts trade covers a wide range of vehicle types. We offer fast availability and fair prices for original and quality spare parts.",
+        "features": [
+          "Original and quality spare parts",
+          "Fast availability",
+          "Fair prices",
+          "All vehicle types",
+          "Consultation and service"
+        ]
       },
       "vehicles": {
         "title": "Vehicle Sales & Repair",
-        "description": "Buying and selling vehicles as well as professional repair and maintenance services."
+        "description": "Buying and selling vehicles as well as professional repair and maintenance services.",
+        "page_title": "Vehicle Sales & Repair – Helvetic Dynamics AG",
+        "page_description": "Buying and selling vehicles as well as professional repair and maintenance services.",
+        "details": "We offer comprehensive vehicle services – from buying and selling to professional repair and maintenance. Our experienced team ensures reliable results.",
+        "features": [
+          "Vehicle buying and selling",
+          "Professional repairs",
+          "Regular maintenance",
+          "Inspections and checks",
+          "Spare parts supply"
+        ]
       },
       "importexport": {
         "title": "Import & Export",
-        "description": "International trade services – we take care of your import and export needs."
+        "description": "International trade services – we take care of your import and export needs.",
+        "page_title": "Import & Export – Helvetic Dynamics AG",
+        "page_description": "International trade services for import and export. Professional handling of your international business.",
+        "details": "We handle all aspects of international trade – from customs clearance and documentation to the logistical processing of your import and export business.",
+        "features": [
+          "Customs clearance",
+          "Documentation and processing",
+          "International transport",
+          "Trade processing",
+          "Regulatory advice"
+        ]
       },
       "courier": {
         "title": "Courier Services",
-        "description": "Fast and reliable courier and delivery services for your urgent shipments."
+        "description": "Fast and reliable courier and delivery services for your urgent shipments.",
+        "page_title": "Courier Services – Helvetic Dynamics AG",
+        "page_description": "Fast and reliable courier and delivery services for urgent shipments throughout Switzerland.",
+        "details": "Our courier services offer fast and reliable delivery for urgent shipments. Whether documents, packages or special goods – we deliver on time.",
+        "features": [
+          "Fast delivery",
+          "Same-day service",
+          "Express deliveries",
+          "Shipment tracking",
+          "Nationwide coverage"
+        ]
+      },
+      "moving": {
+        "title": "Moving Services",
+        "description": "Professional moving services for private and business customers – careful, reliable and on time.",
+        "page_title": "Moving Services – Helvetic Dynamics AG",
+        "page_description": "Professional moving services for private and business customers throughout Switzerland.",
+        "details": "We offer comprehensive moving services for private and business customers. From planning and packing to transport – we ensure a smooth move.",
+        "features": [
+          "Private and business moves",
+          "Packing service",
+          "Furniture assembly",
+          "Insured transport",
+          "Flexible scheduling"
+        ]
+      },
+      "realestate": {
+        "title": "Real Estate",
+        "description": "Acquisition, administration and sale of real estate, including redevelopment, renovation and construction.",
+        "page_title": "Real Estate – Helvetic Dynamics AG",
+        "page_description": "Real estate services: acquisition, administration, sale, redevelopment and new construction.",
+        "details": "Our real estate service includes the acquisition, administration and sale of real estate. We also support you with redevelopment, renovation and new construction projects.",
+        "features": [
+          "Real estate acquisition and sale",
+          "Real estate administration",
+          "Redevelopment and renovation",
+          "New construction projects",
+          "Consultation and planning"
+        ]
       }
     }
   },
@@ -87,6 +222,8 @@
         "vehicles": "Vehicles",
         "importexport": "Import & Export",
         "courier": "Courier Service",
+        "moving": "Moving Services",
+        "realestate": "Real Estate",
         "other": "Other"
       },
       "message": "Your Message",
@@ -113,5 +250,18 @@
     "imprint": "Imprint",
     "terms": "Terms",
     "copyright": "© 2025 Helvetic Dynamics AG. All rights reserved."
+  },
+  "imprint": {
+    "page_title": "Imprint – HELVETIC DYNAMICS AG",
+    "page_description": "Legal information and contact details of Helvetic Dynamics AG.",
+    "label": "Legal",
+    "title": "Imprint",
+    "company_info": "Information according to Art. 8 para. 1 CO",
+    "contact_title": "Contact",
+    "disclaimer_title": "Disclaimer",
+    "disclaimer_content": {
+      "title": "Liability for Content",
+      "text": "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content."
+    }
   }
 }
