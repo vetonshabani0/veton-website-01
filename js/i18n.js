@@ -29,6 +29,21 @@ const I18n = (() => {
   }
 
   /**
+   * Get the correct path to translation files based on current page location.
+   */
+  function getTranslationPath(file) {
+    // Check if we're in a subdirectory (like services/)
+    const path = window.location.pathname;
+    
+    // If path contains /services/ or has more than 2 segments (/, /page.html), we're in a subdirectory
+    if (path.includes('/services/') || path.split('/').filter(s => s).length > 1) {
+      return '../' + file;
+    }
+    
+    return file;
+  }
+
+  /**
    * Load translations JSON for a given language code.
    */
   async function loadTranslations(lang) {
@@ -44,7 +59,8 @@ const I18n = (() => {
     }
 
     try {
-      const res = await fetch(config.file);
+      const filePath = getTranslationPath(config.file);
+      const res = await fetch(filePath);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       cache[lang] = data;

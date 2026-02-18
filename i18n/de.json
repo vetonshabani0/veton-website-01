@@ -26,47 +26,182 @@
   "about": {
     "label": "Über uns",
     "title": "Helvetic Dynamics AG",
-    "description": "Seit 2018 bieten wir von Buchs ZH aus zuverlässige Transport- und Logistikdienstleistungen in der ganzen Schweiz an. Als vielseitiges Unternehmen vereinen wir Gütertransport, Fahrzeughandel und Kurierdienste unter einem Dach.",
-    "text": "Unser Fokus liegt auf Qualität, Pünktlichkeit und persönlichem Service. Ob Warentransport, Fahrzeugreparatur oder internationale Import- und Exportlösungen – wir sind Ihr verlässlicher Partner.",
+    "description": "Seit 2018 bieten wir von Buchs ZH aus zuverlässige Transport- und Logistikdienstleistungen in der ganzen Schweiz an. Als Aktiengesellschaft (AG) mit Sitz in Mühlibachstrasse 42, 8107 Buchs ZH, vereinen wir ein breites Spektrum an Dienstleistungen unter einem Dach.",
+    "text": "Unser Fokus liegt auf Qualität, Pünktlichkeit und persönlichem Service. Ob Warentransport, Fahrzeugreparatur, Immobilienverwaltung oder internationale Import- und Exportlösungen – wir sind Ihr verlässlicher Partner. Mit über 7 Jahren Erfahrung im Schweizer Markt bieten wir umfassende Lösungen für Ihre logistischen und geschäftlichen Anforderungen.",
+    "legal": {
+      "form": "Rechtsform",
+      "form_value": "Aktiengesellschaft (AG)",
+      "register": "Handelsregister",
+      "register_value": "CH-020.3.046.307-8",
+      "uid": "UID / MWST",
+      "uid_value": "CHE-269.404.940",
+      "capital": "Kapital",
+      "capital_value": "CHF 100'000",
+      "founded": "Gegründet",
+      "founded_value": "20. Juli 2018"
+    },
+    "management": {
+      "title": "Geschäftsleitung",
+      "member": "Spat Fejzulahu"
+    },
     "stats": {
       "since": "Seit",
       "since_value": "2018",
       "location": "Standort",
       "location_value": "Buchs ZH",
       "services_count": "Dienstleistungen",
-      "services_count_value": "6+",
+      "services_count_value": "8+",
       "coverage": "Abdeckung",
       "coverage_value": "Schweizweit"
+    }
+  },
+  "advantages": {
+    "label": "Warum wir",
+    "title": "Ihre Vorteile",
+    "subtitle": "Was uns auszeichnet und warum Kunden uns vertrauen",
+    "items": {
+      "quality": {
+        "title": "Qualität & Zuverlässigkeit",
+        "description": "Über 7 Jahre Erfahrung garantieren höchste Qualitätsstandards und termingerechte Lieferungen."
+      },
+      "network": {
+        "title": "Schweizweites Netzwerk",
+        "description": "Umfassende Abdeckung in der ganzen Schweiz mit zuverlässigen Partnern und effizienten Routen."
+      },
+      "flexibility": {
+        "title": "Flexible Lösungen",
+        "description": "Massgeschneiderte Dienstleistungen für jeden Bedarf – von kleinen Sendungen bis zu grossen Projekten."
+      },
+      "technology": {
+        "title": "Moderne Technologie",
+        "description": "Innovative Systeme für Tracking, Planung und Kommunikation für optimale Transparenz."
+      },
+      "support": {
+        "title": "Persönlicher Service",
+        "description": "Dedizierte Betreuung und schnelle Reaktionszeiten – wir sind immer für Sie da."
+      },
+      "experience": {
+        "title": "Bewährte Expertise",
+        "description": "Langjährige Erfahrung in Transport, Logistik und Fahrzeughandel mit nachweislichem Erfolg."
+      }
     }
   },
   "services": {
     "label": "Dienstleistungen",
     "title": "Was wir bieten",
-    "subtitle": "Von Gütertransport bis Fahrzeughandel – wir liefern umfassende Lösungen für Ihre logistischen Anforderungen.",
+    "subtitle": "Von Gütertransport bis Immobilienverwaltung – wir liefern umfassende Lösungen für Ihre logistischen und geschäftlichen Anforderungen.",
     "items": {
       "transport": {
         "title": "Gütertransport",
-        "description": "Zuverlässiger Transport von Waren aller Art – national und international, termingerecht und sicher."
+        "description": "Zuverlässiger Transport von Waren aller Art – national und international, termingerecht und sicher.",
+        "page_title": "Gütertransport – Helvetic Dynamics AG",
+        "page_description": "Professioneller Gütertransport in der ganzen Schweiz. Nationale und internationale Transportlösungen für alle Warenarten.",
+        "details": "Wir bieten zuverlässigen Transport von Waren aller Art, sowohl national als auch international. Unsere Flotte und unser Netzwerk ermöglichen termingerechte und sichere Lieferungen.",
+        "features": [
+          "Nationaler und internationaler Transport",
+          "Alle Warenarten",
+          "Termingerechte Lieferung",
+          "Versicherter Transport",
+          "Flexible Abhol- und Lieferzeiten"
+        ]
       },
       "logistics": {
         "title": "Logistikdienstleistungen",
-        "description": "Professionelle Logistiklösungen für Ihre Supply Chain, von der Lagerung bis zur Auslieferung."
+        "description": "Professionelle Logistiklösungen für Ihre Supply Chain, von der Lagerung bis zur Auslieferung.",
+        "page_title": "Logistikdienstleistungen – Helvetic Dynamics AG",
+        "page_description": "Umfassende Logistiklösungen für Ihre Supply Chain. Von der Lagerung bis zur finalen Auslieferung.",
+        "details": "Unsere Logistikdienstleistungen umfassen die gesamte Supply Chain – von der Lagerung über die Kommissionierung bis hin zur finalen Auslieferung. Wir optimieren Ihre Prozesse für maximale Effizienz.",
+        "features": [
+          "Lagerung und Kommissionierung",
+          "Supply Chain Management",
+          "Bestandsoptimierung",
+          "Just-in-Time Lieferungen",
+          "E-Commerce Logistik"
+        ]
       },
       "autoparts": {
         "title": "Autoersatzteile",
-        "description": "Handel mit hochwertigen Autoersatzteilen – schnelle Verfügbarkeit und faire Preise."
+        "description": "Handel mit hochwertigen Autoersatzteilen – schnelle Verfügbarkeit und faire Preise.",
+        "page_title": "Autoersatzteile – Helvetic Dynamics AG",
+        "page_description": "Handel mit hochwertigen Autoersatzteilen. Schnelle Verfügbarkeit und faire Preise für alle Fahrzeugtypen.",
+        "details": "Unser Handel mit Autoersatzteilen deckt ein breites Spektrum an Fahrzeugtypen ab. Wir bieten schnelle Verfügbarkeit und faire Preise für Original- und Qualitätsersatzteile.",
+        "features": [
+          "Original- und Qualitätsersatzteile",
+          "Schnelle Verfügbarkeit",
+          "Faire Preise",
+          "Alle Fahrzeugtypen",
+          "Beratung und Service"
+        ]
       },
       "vehicles": {
         "title": "Fahrzeugverkauf & Reparatur",
-        "description": "Kauf und Verkauf von Fahrzeugen sowie professionelle Reparatur- und Wartungsservices."
+        "description": "Kauf und Verkauf von Fahrzeugen sowie professionelle Reparatur- und Wartungsservices.",
+        "page_title": "Fahrzeugverkauf & Reparatur – Helvetic Dynamics AG",
+        "page_description": "Kauf und Verkauf von Fahrzeugen sowie professionelle Reparatur- und Wartungsservices.",
+        "details": "Wir bieten umfassende Fahrzeugdienstleistungen – vom Kauf und Verkauf bis hin zu professioneller Reparatur und Wartung. Unser erfahrenes Team sorgt für zuverlässige Ergebnisse.",
+        "features": [
+          "Fahrzeugkauf und -verkauf",
+          "Professionelle Reparaturen",
+          "Regelmässige Wartung",
+          "Inspektionen und Prüfungen",
+          "Ersatzteilversorgung"
+        ]
       },
       "importexport": {
         "title": "Import & Export",
-        "description": "Internationale Handelsdienstleistungen – wir kümmern uns um Ihre Import- und Exportbedürfnisse."
+        "description": "Internationale Handelsdienstleistungen – wir kümmern uns um Ihre Import- und Exportbedürfnisse.",
+        "page_title": "Import & Export – Helvetic Dynamics AG",
+        "page_description": "Internationale Handelsdienstleistungen für Import und Export. Professionelle Abwicklung Ihrer internationalen Geschäfte.",
+        "details": "Wir kümmern uns um alle Aspekte des internationalen Handels – von der Zollabfertigung über die Dokumentation bis hin zur logistischen Abwicklung Ihrer Import- und Exportgeschäfte.",
+        "features": [
+          "Zollabfertigung",
+          "Dokumentation und Abwicklung",
+          "Internationale Transporte",
+          "Handelsabwicklung",
+          "Beratung zu Vorschriften"
+        ]
       },
       "courier": {
         "title": "Kurierdienste",
-        "description": "Schnelle und zuverlässige Kurier- und Zustelldienste für Ihre eiligen Sendungen."
+        "description": "Schnelle und zuverlässige Kurier- und Zustelldienste für Ihre eiligen Sendungen.",
+        "page_title": "Kurierdienste – Helvetic Dynamics AG",
+        "page_description": "Schnelle und zuverlässige Kurier- und Zustelldienste für eilige Sendungen in der ganzen Schweiz.",
+        "details": "Unsere Kurierdienste bieten schnelle und zuverlässige Zustellung für eilige Sendungen. Ob Dokumente, Pakete oder spezielle Güter – wir liefern pünktlich.",
+        "features": [
+          "Schnelle Zustellung",
+          "Same-Day Service",
+          "Express-Lieferungen",
+          "Sendungsverfolgung",
+          "Schweizweite Abdeckung"
+        ]
+      },
+      "moving": {
+        "title": "Umzugsdienste",
+        "description": "Professionelle Umzugsdienstleistungen für Privat- und Geschäftskunden – sorgfältig, zuverlässig und termingerecht.",
+        "page_title": "Umzugsdienste – Helvetic Dynamics AG",
+        "page_description": "Professionelle Umzugsdienstleistungen für Privat- und Geschäftskunden in der ganzen Schweiz.",
+        "details": "Wir bieten umfassende Umzugsdienstleistungen für Privat- und Geschäftskunden. Von der Planung über die Verpackung bis hin zum Transport – wir sorgen für einen reibungslosen Umzug.",
+        "features": [
+          "Privat- und Geschäftsumzüge",
+          "Verpackungsservice",
+          "Möbelmontage",
+          "Versicherter Transport",
+          "Flexible Terminplanung"
+        ]
+      },
+      "realestate": {
+        "title": "Immobilien",
+        "description": "Erwerb, Verwaltung und Verkauf von Immobilien, inklusive Sanierung, Renovation und Neubau.",
+        "page_title": "Immobilien – Helvetic Dynamics AG",
+        "page_description": "Immobiliendienstleistungen: Erwerb, Verwaltung, Verkauf, Sanierung und Neubau.",
+        "details": "Unser Immobilienservice umfasst den Erwerb, die Verwaltung und den Verkauf von Immobilien. Wir unterstützen Sie auch bei Sanierungen, Renovationen und Neubauten.",
+        "features": [
+          "Immobilienerwerb und -verkauf",
+          "Immobilienverwaltung",
+          "Sanierung und Renovation",
+          "Neubauprojekte",
+          "Beratung und Planung"
+        ]
       }
     }
   },
@@ -87,6 +222,8 @@
         "vehicles": "Fahrzeuge",
         "importexport": "Import & Export",
         "courier": "Kurierdienst",
+        "moving": "Umzugsdienste",
+        "realestate": "Immobilien",
         "other": "Sonstiges"
       },
       "message": "Ihre Nachricht",
@@ -113,5 +250,18 @@
     "imprint": "Impressum",
     "terms": "AGB",
     "copyright": "© 2025 Helvetic Dynamics AG. Alle Rechte vorbehalten."
+  },
+  "imprint": {
+    "page_title": "Impressum – HELVETIC DYNAMICS AG",
+    "page_description": "Impressum der Helvetic Dynamics AG mit allen rechtlichen Angaben und Kontaktinformationen.",
+    "label": "Rechtliches",
+    "title": "Impressum",
+    "company_info": "Angaben gemäss Art. 8 Abs. 1 OR",
+    "contact_title": "Kontakt",
+    "disclaimer_title": "Haftungsausschluss",
+    "disclaimer_content": {
+      "title": "Haftung für Inhalte",
+      "text": "Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen."
+    }
   }
 }
