@@ -9,7 +9,7 @@
 **Status:** Active :contentReference[oaicite:3]{index=3}  
 **Registered Since:** 20 July 2018 :contentReference[oaicite:4]{index=4}  
 **Last Commercial Register Update:** 29 November 2024 :contentReference[oaicite:5]{index=5}  
-**Registered Office:** Mühlibachstrasse 42, 8107 Buchs, Canton of Zürich, Switzerland :contentReference[oaicite:6]{index=6}  
+**Registered Office:** Mülibachstrasse 42, 8107 Buchs, Canton of Zürich, Switzerland :contentReference[oaicite:6]{index=6}  
 **Sector:** Transportation of passengers and freight by road :contentReference[oaicite:7]{index=7}  
 **Capital:** CHF 100,000 :contentReference[oaicite:8]{index=8}  
 
@@ -35,7 +35,7 @@ The company’s purpose, as registered in the Swiss commercial register, include
 ## 👔 Management
 
 **Board Members / Authorized Signatories:**  
-- *Spat Fejzulahu* – Member of the Board and Authorized Signatory :contentReference[oaicite:10]{index=10}  
+- *Špat Fejzulahu* – Member of the Board and Authorized Signatory :contentReference[oaicite:10]{index=10}  
 
 ---
 
@@ -45,22 +45,22 @@ Recent notifications from the Swiss Official Gazette of Commerce (SHAB) include:
 
 ### 📌 29 November 2024 (SHAB Publication)
 - Change in management:  
-  - *Spat Fejzulahu* added with individual signing authority.  
+  - *Špat Fejzulahu* added with individual signing authority.  
 
 ### 📌 14 September 2023
-- Management changes and board role updates for Spat Fejzulahu and Pajtim Fejzulahi.
+- Management changes and board role updates for Špat Fejzulahu and Pajtim Fejzulahi.
 
 ### 📌 26 October 2021
 - Company address changed:  
   - Formerly in Regensdorf (ZH).  
-  - New registered office in Buchs (ZH) at Mühlibachstrasse 42.  
+  - New registered office in Buchs (ZH) at Mülibachstrasse 42.  
 
 ---
 
 ## 🏢 Registered Office
 
 **Address:**  
-Mühlibachstrasse 42  
+Mülibachstrasse 42  
 8107 Buchs ZH  
 Switzerland :contentReference[oaicite:13]{index=13}
 
