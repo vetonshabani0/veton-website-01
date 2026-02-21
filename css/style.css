@@ -1052,6 +1052,10 @@ body.loading {
   margin: 0 auto 4rem;
 }
 
+.advantages__header .section-label {
+  justify-content: center;
+}
+
 .advantages__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

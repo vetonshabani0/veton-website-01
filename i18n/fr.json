@@ -296,6 +296,7 @@
       },
       "message": "Votre Message",
       "submit": "Envoyer le Message",
+      "sending": "Envoi en cours...",
       "success": "Merci ! Nous vous contacterons sous peu.",
       "error": "Une erreur s'est produite. Veuillez réessayer."
     },

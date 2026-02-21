@@ -301,15 +301,19 @@ function initBackToTop() {
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const feedback = document.getElementById('formFeedback');
+  const submitBtn = form?.querySelector('button[type="submit"]');
   if (!form || !feedback) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = form.querySelector('#name');
     const email = form.querySelector('#email');
+    const phone = form.querySelector('#phone');
+    const service = form.querySelector('#service');
     const message = form.querySelector('#message');
 
+    // Validation
     if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
       showFeedback(I18n.t('contact.form.error'), 'error');
       return;
@@ -320,9 +324,52 @@ function initContactForm() {
       return;
     }
 
-    // Static site – show success. Connect a backend (Formspree, Netlify Forms) in production.
-    showFeedback(I18n.t('contact.form.success'), 'success');
-    form.reset();
+    // Disable submit button and show loading
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = I18n.t('contact.form.sending') || 'Wird gesendet...';
+    }
+
+    try {
+      // Determine API endpoint
+      // For Netlify: use /.netlify/functions/send-email
+      // For Vercel: use /api/send-email
+      // For custom: use your API URL
+      const apiUrl = '/.netlify/functions/send-email';
+      
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name.value.trim(),
+          email: email.value.trim(),
+          phone: phone?.value.trim() || '',
+          service: service?.value || '',
+          message: message.value.trim()
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        showFeedback(I18n.t('contact.form.success'), 'success');
+        form.reset();
+      } else {
+        throw new Error(data.error || 'Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      showFeedback(I18n.t('contact.form.error') || 'Fehler beim Senden. Bitte versuchen Sie es später erneut.', 'error');
+    } finally {
+      // Re-enable submit button
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = I18n.t('contact.form.submit') || 'Nachricht senden';
+      }
+    }
   });
 
   function showFeedback(msg, type) {
