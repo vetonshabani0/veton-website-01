@@ -25,7 +25,7 @@ function initLoadingScreen() {
   const loadingText = document.getElementById('loadingText');
   const headerLogo = document.querySelector('.header__logo');
   const lottieContainer = document.getElementById('lottieContainer');
-  
+
   if (!loadingScreen || !loadingText || !headerLogo) return;
 
   // Prevent body scroll during loading
@@ -47,11 +47,11 @@ function initLoadingScreen() {
               preserveAspectRatio: 'xMidYMid meet'
             }
           });
-          
+
           // Set animation size (bigger - 40% larger)
           lottieContainer.style.width = '280px';
           lottieContainer.style.height = '168px';
-          
+
           // Apply subtle red tint after animation loads
           anim.addEventListener('DOMLoaded', () => {
             const svg = lottieContainer.querySelector('svg');
@@ -60,19 +60,19 @@ function initLoadingScreen() {
               svg.style.filter = 'hue-rotate(-10deg) saturate(1.3) brightness(0.95)';
             }
           });
-          
+
           // Handle animation loaded
           anim.addEventListener('DOMLoaded', () => {
             console.log('Lottie animation DOM loaded');
           });
-          
+
           // Handle animation errors
           anim.addEventListener('data_failed', (e) => {
             console.error('Lottie animation failed to load:', e);
             // Fallback: show error or use alternative
             lottieContainer.innerHTML = '<div style="color: #666; text-align: center; padding: 20px;">Loading...</div>';
           });
-          
+
           // Store animation reference for cleanup if needed
           window.loadingAnimation = anim;
         } catch (error) {
@@ -85,59 +85,28 @@ function initLoadingScreen() {
         setTimeout(initLottie, 100);
       }
     };
-    
+
     // Wait a bit for lottie library to fully load
     setTimeout(initLottie, 100);
   }
 
-  // After text appears and underline expands, show logo text at center, then reveal page
+  // After text appears and underline expands, reveal page
   setTimeout(() => {
     const logoText = document.getElementById('headerLogoText');
     if (!logoText) return;
-    
-    // Hide loading text
-    loadingText.style.opacity = '0';
-    
-    // Create and show logo text at center position
-    const centerLogoText = document.createElement('span');
-    centerLogoText.className = 'header__logo-text';
-    centerLogoText.textContent = 'HELVETIC DYNAMICS AG';
-    centerLogoText.style.cssText = `
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      visibility: visible;
-      transition: opacity 0.4s ease-in;
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--gray-900);
-      white-space: nowrap;
-      z-index: 10000;
-    `;
-    
-    loadingScreen.appendChild(centerLogoText);
-    
-    // Fade in the center logo text
+
+    // Fade out loading screen and show page
+    loadingScreen.classList.add('loading-screen--hidden');
+    document.body.classList.remove('loading');
+
+    // Show the actual logo text in navbar
+    logoText.style.opacity = '1';
+    logoText.style.visibility = 'visible';
+    logoText.style.transition = 'opacity 0.6s ease-in 0.2s';
+
+    // Remove loading screen after transition
     setTimeout(() => {
-      centerLogoText.style.opacity = '1';
-    }, 100);
-    
-    // After showing logo text, fade out loading screen and show page
-    setTimeout(() => {
-      loadingScreen.classList.add('loading-screen--hidden');
-      document.body.classList.remove('loading');
-      
-      // Show the actual logo text in navbar
-      logoText.style.opacity = '1';
-      logoText.style.visibility = 'visible';
-      logoText.style.transition = 'opacity 0.4s ease-in';
-      
-      // Remove loading screen after transition
-      setTimeout(() => {
-        loadingScreen.remove();
-      }, 600);
+      loadingScreen.remove();
     }, 800);
   }, 3900); // 2.5s truck + 0.8s text fade + 0.6s underline = 3.9s
 }
@@ -196,8 +165,8 @@ function initSingleLanguageSwitcher(switcher, activeLang) {
       toggleDropdown(false);
     }
   });
-  document.addEventListener('keydown', (e) => { 
-    if (e.key === 'Escape') toggleDropdown(false); 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') toggleDropdown(false);
   });
 
   window.addEventListener('languageChanged', (e) => {
@@ -393,7 +362,7 @@ function initScrollAnimations() {
 
   // Enhanced service cards animation with staggered delays
   initServiceCardsAnimation();
-  
+
   // Enhanced advantage cards animation with staggered delays
   initAdvantageCardsAnimation();
 }
