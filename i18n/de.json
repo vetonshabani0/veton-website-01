@@ -16,7 +16,24 @@
     "title": "Zuverlässige Logistik & Transport",
     "subtitle": "Ihr Schweizer Partner für Transport, Logistik, Bauunternehmung, Personal Vermittlung und mehr seit 2018.",
     "cta_primary": "Unsere Dienstleistungen",
-    "cta_secondary": "Kontakt aufnehmen"
+    "cta_secondary": "Kontakt aufnehmen",
+    "slide2": {
+      "badge": "Schweizweite Abdeckung",
+      "title": "Professionelle Logistiklösungen",
+      "subtitle": "Von der Lagerung bis zur Auslieferung – wir sorgen für einen reibungslosen Ablauf Ihrer Supply Chain."
+    },
+    "slide3": {
+      "badge": "Ihr Partner",
+      "title": "Umfassende Dienstleistungen",
+      "subtitle": "Transport, Logistik, Immobilien, Personalvermittlung und mehr – alles aus einer Hand."
+    },
+    "slider": {
+      "prev": "Vorheriges Bild",
+      "next": "Nächstes Bild",
+      "slide1": "Slide 1",
+      "slide2": "Slide 2",
+      "slide3": "Slide 3"
+    }
   },
   "cta": {
     "title": "Bereit für zuverlässige Logistik?",
@@ -25,7 +42,7 @@
   },
   "about": {
     "label": "Über uns",
-    "title": "TEAM",
+    "title": "Über uns",
     "description": "Seit 2018 bieten wir von Buchs ZH aus zuverlässige Transport- und Logistikdienstleistungen in der ganzen Schweiz an. Als Aktiengesellschaft (AG) mit Sitz in Mülibachstrasse 42, 8107 Buchs ZH, vereinen wir ein breites Spektrum an Dienstleistungen unter einem Dach.",
     "text": "Unser Fokus liegt auf Qualität, Pünktlichkeit und persönlichem Service. Ob Warentransport, Fahrzeughandel, Immobilienverwaltung oder internationale Import- und Exportlösungen – wir sind Ihr verlässlicher Partner. Mit über 7 Jahren Erfahrung im Schweizer Markt bieten wir umfassende Lösungen für Ihre logistischen und geschäftlichen Anforderungen.",
     "legal": {

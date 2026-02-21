@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initScrollAnimations();
   initSmoothScroll();
   initParallax();
+  initHeroSlider();
 });
 
 /* ==========================================
@@ -496,7 +497,7 @@ function initSmoothScroll() {
    Parallax – subtle hero background movement
    ========================================== */
 function initParallax() {
-  const heroImg = document.querySelector('.hero__bg-img');
+  const heroImg = document.querySelector('.hero__slide--active .hero__bg-img');
   if (!heroImg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   let ticking = false;
@@ -512,4 +513,110 @@ function initParallax() {
       ticking = true;
     }
   }, { passive: true });
+}
+
+/* ==========================================
+   Hero Slider
+   ========================================== */
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero__slide');
+  const dots = document.querySelectorAll('.hero__slider-dot');
+  const prevBtn = document.querySelector('.hero__slider-btn--prev');
+  const nextBtn = document.querySelector('.hero__slider-btn--next');
+  
+  if (slides.length === 0) return;
+
+  let currentSlide = 0;
+  let slideInterval = null;
+  const slideDuration = 3000; // 3 seconds per slide
+
+  function showSlide(index) {
+    // Remove active class from all slides and dots
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('hero__slide--active', i === index);
+    });
+    
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('hero__slider-dot--active', i === index);
+    });
+
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function prevSlide() {
+    const prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  }
+
+  function goToSlide(index) {
+    if (index >= 0 && index < slides.length) {
+      showSlide(index);
+      resetAutoSlide();
+    }
+  }
+
+  function startAutoSlide() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    
+    slideInterval = setInterval(() => {
+      nextSlide();
+    }, slideDuration);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
+
+  // Event listeners
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      goToSlide(index);
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      prevSlide();
+      resetAutoSlide();
+    } else if (e.key === 'ArrowRight') {
+      nextSlide();
+      resetAutoSlide();
+    }
+  });
+
+  // Pause on hover
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.addEventListener('mouseenter', () => {
+      clearInterval(slideInterval);
+    });
+    
+    heroSection.addEventListener('mouseleave', () => {
+      startAutoSlide();
+    });
+  }
+
+  // Start auto-slide
+  startAutoSlide();
 }

@@ -85,9 +85,14 @@ ${message}
 Diese E-Mail wurde über das Kontaktformular auf helveticdynamics.ch gesendet.
     `;
 
+    // Get sender email from environment variable or use default
+    // To use your own domain, verify it in Resend and set RESEND_FROM_EMAIL env variable
+    // Example: RESEND_FROM_EMAIL="Website Kontaktformular <noreply@helveticdynamics.ch>"
+    const senderEmail = process.env.RESEND_FROM_EMAIL || 'Website Kontaktformular <info@helveticdynamics.ch>';
+
     // Send email using Resend
     const emailData = await resend.emails.send({
-      from: 'Website Kontaktformular <onboarding@resend.dev>', // Update this with your verified domain
+      from: senderEmail,
       to: [recipientEmail],
       replyTo: email,
       subject: `Neue Kontaktanfrage: ${name} - ${serviceName}`,

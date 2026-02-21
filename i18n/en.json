@@ -16,7 +16,24 @@
     "title": "Reliable Logistics & Transport",
     "subtitle": "Your Swiss partner for Transport, Logistics, Construction Company, Personnel Placement and more since 2018.",
     "cta_primary": "Our Services",
-    "cta_secondary": "Get in Touch"
+    "cta_secondary": "Get in Touch",
+    "slide2": {
+      "badge": "Switzerland-wide Coverage",
+      "title": "Professional Logistics Solutions",
+      "subtitle": "From storage to delivery – we ensure a smooth flow of your supply chain."
+    },
+    "slide3": {
+      "badge": "Your Partner",
+      "title": "Comprehensive Services",
+      "subtitle": "Transport, logistics, real estate, personnel placement and more – all from one source."
+    },
+    "slider": {
+      "prev": "Previous Image",
+      "next": "Next Image",
+      "slide1": "Slide 1",
+      "slide2": "Slide 2",
+      "slide3": "Slide 3"
+    }
   },
   "cta": {
     "title": "Ready for reliable logistics?",
@@ -25,7 +42,7 @@
   },
   "about": {
     "label": "About Us",
-    "title": "TEAM",
+    "title": "About Us",
     "description": "Since 2018, we have been providing reliable transport and logistics services across Switzerland from our base in Buchs ZH. As a public limited company (AG) located at Mülibachstrasse 42, 8107 Buchs ZH, we combine a wide range of services under one roof.",
     "text": "Our focus is on quality, punctuality and personal service. Whether goods transport, vehicle trade, real estate management or international import and export solutions – we are your reliable partner. With over 7 years of experience in the Swiss market, we offer comprehensive solutions for your logistics and business needs.",
     "legal": {

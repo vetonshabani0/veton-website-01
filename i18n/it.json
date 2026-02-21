@@ -16,7 +16,24 @@
     "title": "Logistica & Trasporti Affidabili",
     "subtitle": "Il vostro partner svizzero per Trasporto, Logistica, Impresa di Costruzioni, Collocamento Personale e più dal 2018.",
     "cta_primary": "I Nostri Servizi",
-    "cta_secondary": "Contattaci"
+    "cta_secondary": "Contattaci",
+    "slide2": {
+      "badge": "Copertura in Tutta la Svizzera",
+      "title": "Soluzioni Logistiche Professionali",
+      "subtitle": "Dallo stoccaggio alla consegna – garantiamo un flusso regolare della vostra catena di approvvigionamento."
+    },
+    "slide3": {
+      "badge": "Il Vostro Partner",
+      "title": "Servizi Completi",
+      "subtitle": "Trasporto, logistica, immobiliare, collocamento personale e più – tutto da una sola fonte."
+    },
+    "slider": {
+      "prev": "Immagine Precedente",
+      "next": "Immagine Successiva",
+      "slide1": "Slide 1",
+      "slide2": "Slide 2",
+      "slide3": "Slide 3"
+    }
   },
   "cta": {
     "title": "Pronti per una logistica affidabile?",
@@ -25,7 +42,7 @@
   },
   "about": {
     "label": "Chi Siamo",
-    "title": "TEAM",
+    "title": "Chi Siamo",
     "description": "Dal 2018 forniamo servizi di trasporto e logistica affidabili in tutta la Svizzera dalla nostra base a Buchs ZH. Come società anonima (SA) situata in Mülibachstrasse 42, 8107 Buchs ZH, uniamo un'ampia gamma di servizi sotto un unico tetto.",
     "text": "Il nostro focus è su qualità, puntualità e servizio personalizzato. Che si tratti di trasporto merci, commercio veicoli, gestione immobiliare o soluzioni di import ed export internazionali – siamo il vostro partner affidabile. Con oltre 7 anni di esperienza nel mercato svizzero, offriamo soluzioni complete per le vostre esigenze logistiche e commerciali.",
     "legal": {

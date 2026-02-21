@@ -265,28 +265,99 @@
   <main>
     <!-- ========== HERO ========== -->
     <section class="hero" id="hero">
-      <div class="hero__bg">
-        <img
-          src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
-          alt="Gütertransport auf Schweizer Autobahn" loading="eager" class="hero__bg-img">
-        <div class="hero__overlay"></div>
-      </div>
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <div class="hero__badge anim-fade-up">
-            <span class="hero__badge-dot"></span>
-            <span data-i18n="hero.badge">Seit 2018 in der Schweiz</span>
+      <div class="hero__slider">
+        <!-- Slide 1 -->
+        <div class="hero__slide hero__slide--active">
+          <div class="hero__bg">
+            <img
+              src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+              alt="Gütertransport auf Schweizer Autobahn" loading="eager" class="hero__bg-img">
+            <div class="hero__overlay"></div>
           </div>
-          <h1 class="hero__title anim-fade-up anim-delay-1" data-i18n="hero.title">Zuverlässige Logistik<br>& Transport
-          </h1>
-          <p class="hero__subtitle anim-fade-up anim-delay-2" data-i18n="hero.subtitle">Ihr Schweizer Partner für
-            Gütertransport, Fahrzeughandel und Logistiklösungen seit 2018.</p>
-          <div class="hero__actions anim-fade-up anim-delay-3">
-            <a href="#services" class="btn btn--primary btn--lg" data-i18n="hero.cta_primary">Unsere
-              Dienstleistungen</a>
-            <a href="#contact" class="btn btn--glass btn--lg" data-i18n="hero.cta_secondary">Kontakt aufnehmen</a>
+          <div class="container hero__inner">
+            <div class="hero__content">
+              <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                <span data-i18n="hero.badge">Seit 2018 in der Schweiz</span>
+              </div>
+              <h1 class="hero__title" data-i18n="hero.title">Zuverlässige Logistik<br>& Transport</h1>
+              <p class="hero__subtitle" data-i18n="hero.subtitle">Ihr Schweizer Partner für
+                Gütertransport, Fahrzeughandel und Logistiklösungen seit 2018.</p>
+              <div class="hero__actions">
+                <a href="#services" class="btn btn--primary btn--lg" data-i18n="hero.cta_primary">Unsere
+                  Dienstleistungen</a>
+                <a href="#contact" class="btn btn--glass btn--lg" data-i18n="hero.cta_secondary">Kontakt aufnehmen</a>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="hero__slide">
+          <div class="hero__bg">
+            <img
+              src="https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+              alt="Professionelle Logistikdienstleistungen" loading="lazy" class="hero__bg-img">
+            <div class="hero__overlay"></div>
+          </div>
+          <div class="container hero__inner">
+            <div class="hero__content">
+              <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                <span data-i18n="hero.slide2.badge">Schweizweite Abdeckung</span>
+              </div>
+              <h1 class="hero__title" data-i18n="hero.slide2.title">Professionelle<br>Logistiklösungen</h1>
+              <p class="hero__subtitle" data-i18n="hero.slide2.subtitle">Von der Lagerung bis zur Auslieferung – wir sorgen für einen reibungslosen Ablauf Ihrer Supply Chain.</p>
+              <div class="hero__actions">
+                <a href="#services" class="btn btn--primary btn--lg" data-i18n="hero.cta_primary">Unsere Dienstleistungen</a>
+                <a href="#contact" class="btn btn--glass btn--lg" data-i18n="hero.cta_secondary">Kontakt aufnehmen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero__slide">
+          <div class="hero__bg">
+            <img
+              src="https://images.pexels.com/photos/4483862/pexels-photo-4483862.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+              alt="Transport und Logistik" loading="lazy" class="hero__bg-img">
+            <div class="hero__overlay"></div>
+          </div>
+          <div class="container hero__inner">
+            <div class="hero__content">
+              <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                <span data-i18n="hero.slide3.badge">Ihr Partner</span>
+              </div>
+              <h1 class="hero__title" data-i18n="hero.slide3.title">Umfassende<br>Dienstleistungen</h1>
+              <p class="hero__subtitle" data-i18n="hero.slide3.subtitle">Transport, Logistik, Immobilien, Personalvermittlung und mehr – alles aus einer Hand.</p>
+              <div class="hero__actions">
+                <a href="#services" class="btn btn--primary btn--lg" data-i18n="hero.cta_primary">Unsere Dienstleistungen</a>
+                <a href="#contact" class="btn btn--glass btn--lg" data-i18n="hero.cta_secondary">Kontakt aufnehmen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Controls -->
+      <div class="hero__slider-controls">
+        <button class="hero__slider-btn hero__slider-btn--prev" aria-label="Vorheriges Bild">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <div class="hero__slider-dots">
+          <button class="hero__slider-dot hero__slider-dot--active" aria-label="Slide 1" data-slide="0"></button>
+          <button class="hero__slider-dot" aria-label="Slide 2" data-slide="1"></button>
+          <button class="hero__slider-dot" aria-label="Slide 3" data-slide="2"></button>
+        </div>
+        <button class="hero__slider-btn hero__slider-btn--next" aria-label="Nächstes Bild">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
       </div>
     </section>
 
