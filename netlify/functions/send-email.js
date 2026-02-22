@@ -58,16 +58,147 @@ exports.handler = async (event, context) => {
     const serviceName = service || 'Nicht angegeben';
     const phoneText = phone ? `\nTelefon: ${phone}` : '';
     
+    // Service name mapping for better display
+    const serviceNames = {
+      'transport': 'Gütertransport',
+      'logistics': 'Logistik',
+      'autoparts': 'Autoersatzteile',
+      'vehicles': 'Fahrzeugverkauf & Reparatur',
+      'importexport': 'Import & Export',
+      'courier': 'Kurierdienste',
+      'bauschtelle': 'Baustelle',
+      'realestate': 'Immobilien',
+      'personnel': 'Vermittlung Personal',
+      'temporaryoffice': 'Temporäres Büro',
+      'drivers': 'Chauffeur Kategorie B & C',
+      'other': 'Sonstiges'
+    };
+    const displayServiceName = serviceNames[service] || serviceName;
+    
     const emailHtml = `
-      <h2>Neue Kontaktanfrage von der Website</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>E-Mail:</strong> ${email}</p>
-      ${phone ? `<p><strong>Telefon:</strong> ${phone}</p>` : ''}
-      <p><strong>Dienstleistung:</strong> ${serviceName}</p>
-      <p><strong>Nachricht:</strong></p>
-      <p>${message.replace(/\n/g, '<br>')}</p>
-      <hr>
-      <p style="color: #666; font-size: 12px;">Diese E-Mail wurde über das Kontaktformular auf helveticdynamics.ch gesendet.</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neue Kontaktanfrage</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f5f5; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+          
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #E30613 0%, #B3050F 100%); padding: 40px 40px 30px; text-align: center;">
+              <div style="display: inline-block; width: 60px; height: 60px; background-color: #ffffff; border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #E30613 0%, #B3050F 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                  <span style="color: #ffffff; font-size: 24px; font-weight: 900; line-height: 1;">H</span>
+                </div>
+              </div>
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 800; letter-spacing: -0.5px;">Neue Kontaktanfrage</h1>
+              <p style="margin: 10px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 500;">Von Ihrer Website erhalten</p>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td style="padding: 40px;">
+              
+              <!-- Info Card -->
+              <div style="background-color: #f8f9fa; border-left: 4px solid #E30613; border-radius: 8px; padding: 24px; margin-bottom: 30px;">
+                <h2 style="margin: 0 0 20px; color: #1a1a1a; font-size: 20px; font-weight: 700;">Kontaktinformationen</h2>
+                
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #e5e5e5;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td width="140" style="color: #666666; font-size: 14px; font-weight: 600; vertical-align: top;">Name:</td>
+                          <td style="color: #1a1a1a; font-size: 15px; font-weight: 500;">${name}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #e5e5e5;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td width="140" style="color: #666666; font-size: 14px; font-weight: 600; vertical-align: top;">E-Mail:</td>
+                          <td style="color: #1a1a1a; font-size: 15px;">
+                            <a href="mailto:${email}" style="color: #E30613; text-decoration: none; font-weight: 500;">${email}</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  ${phone ? `
+                  <tr>
+                    <td style="padding: 12px 0; border-bottom: 1px solid #e5e5e5;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td width="140" style="color: #666666; font-size: 14px; font-weight: 600; vertical-align: top;">Telefon:</td>
+                          <td style="color: #1a1a1a; font-size: 15px; font-weight: 500;">
+                            <a href="tel:${phone}" style="color: #E30613; text-decoration: none;">${phone}</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  ` : ''}
+                  <tr>
+                    <td style="padding: 12px 0;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td width="140" style="color: #666666; font-size: 14px; font-weight: 600; vertical-align: top;">Dienstleistung:</td>
+                          <td style="color: #1a1a1a; font-size: 15px; font-weight: 500;">${displayServiceName}</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <!-- Message Card -->
+              <div style="background-color: #ffffff; border: 2px solid #e5e5e5; border-radius: 8px; padding: 24px; margin-bottom: 30px;">
+                <h2 style="margin: 0 0 16px; color: #1a1a1a; font-size: 20px; font-weight: 700;">Nachricht</h2>
+                <div style="color: #333333; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">${message.replace(/\n/g, '<br>')}</div>
+              </div>
+
+              <!-- Action Button -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <a href="mailto:${email}?subject=Re: Ihre Anfrage bei Helvetic Dynamics AG" style="display: inline-block; background: linear-gradient(135deg, #E30613 0%, #B3050F 100%); color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 15px; box-shadow: 0 4px 12px rgba(227, 6, 19, 0.3);">Antworten</a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f8f9fa; padding: 30px 40px; text-align: center; border-top: 1px solid #e5e5e5;">
+              <p style="margin: 0 0 8px; color: #1a1a1a; font-size: 16px; font-weight: 700;">Helvetic Dynamics AG</p>
+              <p style="margin: 0 0 12px; color: #666666; font-size: 13px; line-height: 1.5;">
+                Mülibachstrasse 42<br>
+                8107 Buchs ZH, Schweiz
+              </p>
+              <p style="margin: 0; color: #999999; font-size: 12px;">
+                Diese E-Mail wurde automatisch über das Kontaktformular auf 
+                <a href="https://helveticdynamics.ch" style="color: #E30613; text-decoration: none;">helveticdynamics.ch</a> gesendet.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
     `;
 
     const emailText = `

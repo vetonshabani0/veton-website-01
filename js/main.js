@@ -23,93 +23,26 @@ document.addEventListener('DOMContentLoaded', async () => {
    ========================================== */
 function initLoadingScreen() {
   const loadingScreen = document.getElementById('loadingScreen');
+  const loadingLogo = document.getElementById('loadingLogo');
   const loadingText = document.getElementById('loadingText');
   const headerLogo = document.querySelector('.header__logo');
-  const lottieContainer = document.getElementById('lottieContainer');
 
-  if (!loadingScreen || !loadingText || !headerLogo) return;
+  if (!loadingScreen || !loadingLogo || !loadingText || !headerLogo) return;
 
   // Prevent body scroll during loading
   document.body.classList.add('loading');
 
-  // Initialize Lottie animation
-  if (lottieContainer) {
-    const initLottie = () => {
-      if (typeof lottie !== 'undefined') {
-        try {
-          // Try loading the extracted JSON file from .lottie
-          const anim = lottie.loadAnimation({
-            container: lottieContainer,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: 'assets/icons/animations/ba0272ba-0135-4cf7-b26d-b2510f8179bb.json',
-            rendererSettings: {
-              preserveAspectRatio: 'xMidYMid meet'
-            }
-          });
-
-          // Set animation size (bigger - 40% larger)
-          lottieContainer.style.width = '280px';
-          lottieContainer.style.height = '168px';
-
-          // Apply subtle red tint after animation loads
-          anim.addEventListener('DOMLoaded', () => {
-            const svg = lottieContainer.querySelector('svg');
-            if (svg) {
-              // Apply subtle red tint while preserving form/details
-              svg.style.filter = 'hue-rotate(-10deg) saturate(1.3) brightness(0.95)';
-            }
-          });
-
-          // Handle animation loaded
-          anim.addEventListener('DOMLoaded', () => {
-            console.log('Lottie animation DOM loaded');
-          });
-
-          // Handle animation errors
-          anim.addEventListener('data_failed', (e) => {
-            console.error('Lottie animation failed to load:', e);
-            // Fallback: show error or use alternative
-            lottieContainer.innerHTML = '<div style="color: #666; text-align: center; padding: 20px;">Loading...</div>';
-          });
-
-          // Store animation reference for cleanup if needed
-          window.loadingAnimation = anim;
-        } catch (error) {
-          console.error('Error initializing Lottie animation:', error);
-          // Fallback display
-          lottieContainer.innerHTML = '<div style="color: #666; text-align: center; padding: 20px;">Loading...</div>';
-        }
-      } else {
-        // Retry after a short delay if lottie is not yet loaded
-        setTimeout(initLottie, 100);
-      }
-    };
-
-    // Wait a bit for lottie library to fully load
-    setTimeout(initLottie, 100);
-  }
-
   // After text appears and underline expands, reveal page
   setTimeout(() => {
-    const logoText = document.getElementById('headerLogoText');
-    if (!logoText) return;
-
     // Fade out loading screen and show page
     loadingScreen.classList.add('loading-screen--hidden');
     document.body.classList.remove('loading');
-
-    // Show the actual logo text in navbar
-    logoText.style.opacity = '1';
-    logoText.style.visibility = 'visible';
-    logoText.style.transition = 'opacity 0.6s ease-in 0.2s';
 
     // Remove loading screen after transition
     setTimeout(() => {
       loadingScreen.remove();
     }, 800);
-  }, 3900); // 2.5s truck + 0.8s text fade + 0.6s underline = 3.9s
+  }, 2000); // Reduced timing since truck animation is removed
 }
 
 /* ==========================================
