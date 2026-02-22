@@ -264,14 +264,27 @@ function initContactForm() {
 
     // Validation
     if (!name || !name.value.trim() || !email || !email.value.trim() || !message || !message.value.trim()) {
-      console.error('Validation failed: missing required fields');
+      console.error('Validation failed: missing required fields', {
+        name: name?.value,
+        email: email?.value,
+        message: message?.value
+      });
       showFeedback(I18n.t('contact.form.error'), 'error');
       return;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-      console.error('Validation failed: invalid email format');
-      showFeedback(I18n.t('contact.form.error'), 'error');
+    // Trim email and validate using browser's built-in validation
+    const emailValue = email.value.trim();
+    console.log('Email value to validate:', emailValue);
+    
+    // Use browser's built-in email validation (respects type="email")
+    if (!email.checkValidity()) {
+      console.error('Validation failed: browser email validation failed', {
+        emailValue,
+        validity: email.validity,
+        validationMessage: email.validationMessage
+      });
+      showFeedback(email.validationMessage || I18n.t('contact.form.error'), 'error');
       return;
     }
 
@@ -291,7 +304,7 @@ function initContactForm() {
       
       const formData = {
         name: name.value.trim(),
-        email: email.value.trim(),
+        email: emailValue,
         phone: phone?.value.trim() || '',
         service: service?.value || '',
         message: message.value.trim()
