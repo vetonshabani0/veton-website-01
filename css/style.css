@@ -75,8 +75,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   -webkit-text-size-adjust: 100%;
-  /* Prevent content from showing above header on iOS */
-  padding-top: env(safe-area-inset-top);
 }
 
 body {
@@ -89,6 +87,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   position: relative;
+  /* Add white background at top to cover safe area */
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100px, var(--bg) 100px);
 }
 
 body::after {
@@ -102,6 +102,20 @@ body::after {
   opacity: 0.04;
   pointer-events: none;
   z-index: 9999;
+}
+
+/* Fixed white overlay at top to cover safe area on iPhone */
+body::before {
+  content: "";
+  position: fixed;
+  top: -200px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 200px;
+  background: #ffffff;
+  z-index: 99998;
+  pointer-events: none;
 }
 
 img,
@@ -460,7 +474,7 @@ body.loading {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10000;
+  z-index: 99999;
   background: #ffffff;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -470,27 +484,23 @@ body.loading {
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   will-change: transform;
-  /* Handle safe area insets for iPhone notch - extend header into safe area */
-  padding-top: env(safe-area-inset-top);
+  /* Extend header upward to cover safe area - use large negative margin */
+  margin-top: -100px;
+  padding-top: 100px;
   /* Ensure header covers the entire top including safe area */
-  min-height: calc(72px + env(safe-area-inset-top));
+  min-height: calc(72px + 100px);
   /* Force header to cover everything at the top */
-  margin-top: 0;
   top: 0 !important;
-  /* Extend background upward to cover safe area */
-  background: #ffffff;
-  background-clip: padding-box;
 }
 
 /* Add white background pseudo-element to cover safe area completely */
 .header::before {
   content: '';
   position: absolute;
-  top: calc(-1 * env(safe-area-inset-top));
+  top: -100px;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: calc(100% + env(safe-area-inset-top));
+  height: 100px;
   background: #ffffff;
   z-index: -1;
 }
