@@ -466,6 +466,14 @@ body.loading {
   transition: all var(--duration) var(--ease);
 }
 
+/* Mobile safe area fix for iOS */
+@supports (padding: max(0px)) {
+  .header {
+    padding-top: env(safe-area-inset-top);
+    background: #fff;
+  }
+}
+
 .header--scrolled {
   background: rgba(255, 255, 255, 0.95);
   border-bottom-color: var(--border);
@@ -1940,6 +1948,29 @@ body.loading {
 }
 
 @media (max-width: 768px) {
+  .header {
+    top: 0;
+    background: #fff !important;
+    padding-top: env(safe-area-inset-top);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: calc(-1 * env(safe-area-inset-top));
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top);
+    background: #fff;
+    z-index: -1;
+  }
+
+  .header--scrolled {
+    background: #fff !important;
+    box-shadow: var(--shadow-sm);
+  }
+
   .header__nav {
     position: fixed;
     top: 72px;
