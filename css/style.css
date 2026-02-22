@@ -1981,6 +1981,11 @@ body.loading {
 }
 
 @media (max-width: 768px) {
+  /* Ensure header stays visible when menu is open */
+  .header {
+    z-index: 100000 !important;
+  }
+
   .header__nav {
     position: fixed;
     top: 72px;
@@ -2071,12 +2076,24 @@ body.loading {
   }
 
   .header__menu-toggle {
-    display: flex;
+    display: flex !important;
+    z-index: 100001;
+    position: relative;
+  }
+
+  /* Ensure hamburger button is visible and styled when menu is open */
+  .header__menu-toggle[aria-expanded="true"] {
+    z-index: 100001;
   }
 
   /* Ensure header stays on one line */
   .header__inner {
     flex-wrap: nowrap;
+  }
+
+  /* Ensure header remains visible when menu is open */
+  .header {
+    z-index: 100000 !important;
   }
 
   .header__logo {
