@@ -464,6 +464,14 @@ body.loading {
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
   transition: all var(--duration) var(--ease);
+  /* Ensure header stays at very top on iOS Safari */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  /* Handle safe area insets for iPhone notch */
+  padding-top: env(safe-area-inset-top);
+  /* Prevent content from showing above header on scroll */
+  margin-top: 0;
 }
 
 .header--scrolled {
