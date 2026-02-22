@@ -263,6 +263,8 @@ body.loading {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100dvh;
   background: var(--bg);
   z-index: 9999;
   display: flex;
@@ -924,7 +926,7 @@ body.loading {
    ======================================== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1994,7 +1996,7 @@ body.loading {
     z-index: 9999;
     padding: 0;
     width: 100%;
-    height: calc(100vh - 72px);
+    height: calc(100dvh - 72px);
     border-top: 30px solid var(--red);
   }
 
@@ -2015,7 +2017,7 @@ body.loading {
     background: #fff;
     border-radius: 0;
     margin: 0;
-    min-height: calc(100vh - 72px);
+    min-height: calc(100dvh - 72px);
     height: 100%;
     box-sizing: border-box;
     list-style: none;
