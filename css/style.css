@@ -87,8 +87,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   position: relative;
-  /* Add white background at top to cover safe area */
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100px, var(--bg) 100px);
 }
 
 body::after {
@@ -102,20 +100,6 @@ body::after {
   opacity: 0.04;
   pointer-events: none;
   z-index: 9999;
-}
-
-/* Fixed white overlay at top to cover safe area on iPhone */
-body::before {
-  content: "";
-  position: fixed;
-  top: -200px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 200px;
-  background: #ffffff;
-  z-index: 99998;
-  pointer-events: none;
 }
 
 img,
@@ -474,39 +458,16 @@ body.loading {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99999;
-  background: #ffffff;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
   transition: all var(--duration) var(--ease);
-  /* Ensure header stays at very top on iOS Safari */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: transform;
-  /* Extend header upward to cover safe area - use large negative margin */
-  margin-top: -100px;
-  padding-top: 100px;
-  /* Ensure header covers the entire top including safe area */
-  min-height: calc(72px + 100px);
-  /* Force header to cover everything at the top */
-  top: 0 !important;
-}
-
-/* Add white background pseudo-element to cover safe area completely */
-.header::before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: #ffffff;
-  z-index: -1;
 }
 
 .header--scrolled {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.95);
   border-bottom-color: var(--border);
   box-shadow: var(--shadow-sm);
 }
@@ -517,8 +478,6 @@ body.loading {
   justify-content: space-between;
   height: 72px;
   flex-wrap: nowrap;
-  /* Position content below safe area */
-  margin-top: env(safe-area-inset-top);
 }
 
 .header__logo {
@@ -1981,11 +1940,6 @@ body.loading {
 }
 
 @media (max-width: 768px) {
-  /* Ensure header stays visible when menu is open */
-  .header {
-    z-index: 100000 !important;
-  }
-
   .header__nav {
     position: fixed;
     top: 72px;
@@ -2076,24 +2030,12 @@ body.loading {
   }
 
   .header__menu-toggle {
-    display: flex !important;
-    z-index: 100001;
-    position: relative;
-  }
-
-  /* Ensure hamburger button is visible and styled when menu is open */
-  .header__menu-toggle[aria-expanded="true"] {
-    z-index: 100001;
+    display: flex;
   }
 
   /* Ensure header stays on one line */
   .header__inner {
     flex-wrap: nowrap;
-  }
-
-  /* Ensure header remains visible when menu is open */
-  .header {
-    z-index: 100000 !important;
   }
 
   .header__logo {
