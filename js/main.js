@@ -235,11 +235,24 @@ function initBackToTop() {
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const feedback = document.getElementById('formFeedback');
-  const submitBtn = form?.querySelector('button[type="submit"]');
-  if (!form || !feedback) return;
+  
+  if (!form) {
+    console.warn('Contact form not found');
+    return;
+  }
+  
+  if (!feedback) {
+    console.warn('Form feedback element not found');
+    return;
+  }
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  
+  console.log('Contact form initialized', { form, feedback, submitBtn });
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    console.log('Form submitted');
 
     const name = form.querySelector('#name');
     const email = form.querySelector('#email');
@@ -247,13 +260,17 @@ function initContactForm() {
     const service = form.querySelector('#service');
     const message = form.querySelector('#message');
 
+    console.log('Form fields:', { name, email, phone, service, message });
+
     // Validation
-    if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+    if (!name || !name.value.trim() || !email || !email.value.trim() || !message || !message.value.trim()) {
+      console.error('Validation failed: missing required fields');
       showFeedback(I18n.t('contact.form.error'), 'error');
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      console.error('Validation failed: invalid email format');
       showFeedback(I18n.t('contact.form.error'), 'error');
       return;
     }
@@ -272,21 +289,27 @@ function initContactForm() {
       // For custom: use your API URL
       const apiUrl = '/.netlify/functions/send-email';
       
+      const formData = {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        phone: phone?.value.trim() || '',
+        service: service?.value || '',
+        message: message.value.trim()
+      };
+      
+      console.log('Sending request to:', apiUrl, formData);
+      
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: name.value.trim(),
-          email: email.value.trim(),
-          phone: phone?.value.trim() || '',
-          service: service?.value || '',
-          message: message.value.trim()
-        })
+        body: JSON.stringify(formData)
       });
 
+      console.log('Response status:', response.status);
       const data = await response.json();
+      console.log('Response data:', data);
 
       if (response.ok && data.success) {
         showFeedback(I18n.t('contact.form.success'), 'success');
