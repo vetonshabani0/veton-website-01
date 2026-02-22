@@ -29,8 +29,23 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    // Check if Resend API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set');
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          error: 'Email service not configured',
+          message: 'RESEND_API_KEY environment variable is missing'
+        })
+      };
+    }
+
     const data = JSON.parse(event.body);
     const { name, email, phone, service, message } = data;
+
+    console.log('Received form data:', { name, email, phone, service, message: message?.substring(0, 50) });
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -53,6 +68,7 @@ exports.handler = async (event, context) => {
 
     // Get recipient email from environment variable or use default
     const recipientEmail = process.env.CONTACT_EMAIL || 'info@helveticdynamics.ch';
+    console.log('Sending email to:', recipientEmail);
 
     // Prepare email content
     const serviceName = service || 'Nicht angegeben';
@@ -220,8 +236,10 @@ Diese E-Mail wurde über das Kontaktformular auf helveticdynamics.ch gesendet.
     // To use your own domain, verify it in Resend and set RESEND_FROM_EMAIL env variable
     // Example: RESEND_FROM_EMAIL="Website Kontaktformular <noreply@helveticdynamics.ch>"
     const senderEmail = process.env.RESEND_FROM_EMAIL || 'Website Kontaktformular <info@helveticdynamics.ch>';
+    console.log('Sending from:', senderEmail);
 
     // Send email using Resend
+    console.log('Attempting to send email via Resend...');
     const emailData = await resend.emails.send({
       from: senderEmail,
       to: [recipientEmail],
@@ -231,13 +249,46 @@ Diese E-Mail wurde über das Kontaktformular auf helveticdynamics.ch gesendet.
       text: emailText
     });
 
+    console.log('Resend API response:', { 
+      id: emailData?.id, 
+      data: emailData?.data,
+      error: emailData?.error 
+    });
+
+    // Check if Resend returned an error
+    if (emailData.error) {
+      console.error('Resend API error:', emailData.error);
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          error: 'Failed to send email',
+          message: emailData.error.message || 'Resend API error',
+          details: emailData.error
+        })
+      };
+    }
+
+    if (!emailData.data || !emailData.data.id) {
+      console.error('Unexpected Resend response:', emailData);
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          error: 'Failed to send email',
+          message: 'Unexpected response from Resend API',
+          details: emailData
+        })
+      };
+    }
+
     return {
       statusCode: 200,
       headers,
       body: JSON.stringify({ 
         success: true, 
         message: 'Email sent successfully',
-        id: emailData.id 
+        id: emailData.data.id 
       })
     };
 
