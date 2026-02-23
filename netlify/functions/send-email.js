@@ -67,8 +67,16 @@ exports.handler = async (event, context) => {
     }
 
     // Get recipient email from environment variable or use default
+    // Note: In Resend testing mode, you can only send to your verified email address
+    // Set CONTACT_EMAIL environment variable in Netlify to your verified email for testing
+    // Or verify your domain at https://resend.com/domains to send to any email
     const recipientEmail = process.env.CONTACT_EMAIL || 'info@helveticdynamics.com';
     console.log('Sending email to:', recipientEmail);
+    
+    // If in testing mode and sending to non-verified email, provide helpful error
+    if (!process.env.CONTACT_EMAIL && recipientEmail !== 'vetonshabani0@gmail.com') {
+      console.warn('Warning: Resend may be in testing mode. Consider setting CONTACT_EMAIL to your verified email address.');
+    }
 
     // Prepare email content
     const serviceName = service || 'Nicht angegeben';
@@ -202,7 +210,7 @@ exports.handler = async (event, context) => {
               </p>
               <p style="margin: 0; color: #999999; font-size: 12px;">
                 Diese E-Mail wurde automatisch über das Kontaktformular auf 
-                <a href="https://helveticdynamics.ch" style="color: #E30613; text-decoration: none;">helveticdynamics.ch</a> gesendet.
+                <a href="https://helveticdynamics.com" style="color: #E30613; text-decoration: none;">helveticdynamics.com</a> gesendet.
               </p>
             </td>
           </tr>
@@ -227,12 +235,12 @@ Nachricht:
 ${message}
 
 ---
-Diese E-Mail wurde über das Kontaktformular auf helveticdynamics.ch gesendet.
+Diese E-Mail wurde über das Kontaktformular auf helveticdynamics.com gesendet.
     `;
 
     // Get sender email from environment variable or use default
     // To use your own domain, verify it in Resend and set RESEND_FROM_EMAIL env variable
-    // Example: RESEND_FROM_EMAIL="Website Kontaktformular <noreply@helveticdynamics.ch>"
+    // Example: RESEND_FROM_EMAIL="Website Kontaktformular <noreply@helveticdynamics.com>"
     // If domain is not verified, use onboarding@resend.dev (verified by default)
     const senderEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
     console.log('Sending from:', senderEmail);
