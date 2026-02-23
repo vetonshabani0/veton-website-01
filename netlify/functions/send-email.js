@@ -67,7 +67,7 @@ exports.handler = async (event, context) => {
     }
 
     // Get recipient email from environment variable or use default
-    const recipientEmail = process.env.CONTACT_EMAIL || 'info@helveticdynamics.ch';
+    const recipientEmail = process.env.CONTACT_EMAIL || 'info@helveticdynamics.com';
     console.log('Sending email to:', recipientEmail);
 
     // Prepare email content
@@ -108,10 +108,8 @@ exports.handler = async (event, context) => {
           <!-- Header -->
           <tr>
             <td style="background: linear-gradient(135deg, #E30613 0%, #B3050F 100%); padding: 40px 40px 30px; text-align: center;">
-              <div style="display: inline-block; width: 60px; height: 60px; background-color: #ffffff; border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #E30613 0%, #B3050F 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                  <span style="color: #ffffff; font-size: 24px; font-weight: 900; line-height: 1;">H</span>
-                </div>
+              <div style="margin-bottom: 20px;">
+                <img src="https://helveticadynamics.netlify.app/assets/icons/hd-just-logo-red.jpeg" alt="Helvetic Dynamics AG" style="width: 120px; height: auto; display: block; margin: 0 auto;">
               </div>
               <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 800; letter-spacing: -0.5px;">Neue Kontaktanfrage</h1>
               <p style="margin: 10px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 500;">Von Ihrer Website erhalten</p>
