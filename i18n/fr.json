@@ -27,12 +27,18 @@
       "title": "Services Complets",
       "subtitle": "Transport, logistique, immobilier, placement de personnel et plus – tout d'une seule source."
     },
+    "slide4": {
+      "badge": "Chantier Professionnel",
+      "title": "Services de Chantier",
+      "subtitle": "De la planification à l'exécution – services professionnels de chantier pour tous vos projets de construction."
+    },
     "slider": {
       "prev": "Image Précédente",
       "next": "Image Suivante",
       "slide1": "Diapositive 1",
       "slide2": "Diapositive 2",
-      "slide3": "Diapositive 3"
+      "slide3": "Diapositive 3",
+      "slide4": "Diapositive 4"
     }
   },
   "cta": {

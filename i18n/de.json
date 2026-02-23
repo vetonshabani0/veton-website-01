@@ -27,12 +27,18 @@
       "title": "Umfassende Dienstleistungen",
       "subtitle": "Transport, Logistik, Immobilien, Personalvermittlung und mehr – alles aus einer Hand."
     },
+    "slide4": {
+      "badge": "Professionelle Baustelle",
+      "title": "Baustelle Dienstleistungen",
+      "subtitle": "Von der Planung bis zur Ausführung – professionelle Baustellendienstleistungen für alle Ihre Bauprojekte."
+    },
     "slider": {
       "prev": "Vorheriges Bild",
       "next": "Nächstes Bild",
       "slide1": "Slide 1",
       "slide2": "Slide 2",
-      "slide3": "Slide 3"
+      "slide3": "Slide 3",
+      "slide4": "Slide 4"
     }
   },
   "cta": {

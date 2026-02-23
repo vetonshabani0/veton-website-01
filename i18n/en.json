@@ -27,12 +27,18 @@
       "title": "Comprehensive Services",
       "subtitle": "Transport, logistics, real estate, personnel placement and more – all from one source."
     },
+    "slide4": {
+      "badge": "Professional Construction Site",
+      "title": "Construction Site Services",
+      "subtitle": "From planning to execution – professional construction site services for all your construction projects."
+    },
     "slider": {
       "prev": "Previous Image",
       "next": "Next Image",
       "slide1": "Slide 1",
       "slide2": "Slide 2",
-      "slide3": "Slide 3"
+      "slide3": "Slide 3",
+      "slide4": "Slide 4"
     }
   },
   "cta": {

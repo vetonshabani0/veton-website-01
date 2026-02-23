@@ -27,12 +27,18 @@
       "title": "Servizi Completi",
       "subtitle": "Trasporto, logistica, immobiliare, collocamento personale e più – tutto da una sola fonte."
     },
+    "slide4": {
+      "badge": "Cantiere Professionale",
+      "title": "Servizi di Cantiere",
+      "subtitle": "Dalla pianificazione all'esecuzione – servizi professionali di cantiere per tutti i vostri progetti di costruzione."
+    },
     "slider": {
       "prev": "Immagine Precedente",
       "next": "Immagine Successiva",
       "slide1": "Slide 1",
       "slide2": "Slide 2",
-      "slide3": "Slide 3"
+      "slide3": "Slide 3",
+      "slide4": "Slide 4"
     }
   },
   "cta": {
