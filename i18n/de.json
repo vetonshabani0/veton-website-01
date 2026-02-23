@@ -66,14 +66,23 @@
     "team": {
       "title": "TEAM",
       "members": [
-        "Shpat Fejzulahu",
-        "Yzeir Fejzulahu",
-        "Pajtim Fejzulahu"
+        {
+          "name": "Spat Fejzulahu",
+          "title": "CEO"
+        },
+        {
+          "name": "Uzeir Fejzulahu",
+          "title": "Bauleiter"
+        },
+        {
+          "name": "Pajtim Fejzulahu",
+          "title": "Transportleiter"
+        }
       ]
     },
     "management": {
       "title": "Geschäftsleitung",
-      "member": "Shpat Fejzulahu"
+      "member": "Spat Fejzulahu"
     },
     "stats": {
       "since": "Seit",

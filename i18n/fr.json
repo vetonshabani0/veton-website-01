@@ -66,14 +66,23 @@
     "team": {
       "title": "TEAM",
       "members": [
-        "Shpat Fejzulahu",
-        "Yzeir Fejzulahu",
-        "Pajtim Fejzulahu"
+        {
+          "name": "Spat Fejzulahu",
+          "title": "PDG"
+        },
+        {
+          "name": "Uzeir Fejzulahu",
+          "title": "Chef de chantier"
+        },
+        {
+          "name": "Pajtim Fejzulahu",
+          "title": "Responsable transport"
+        }
       ]
     },
     "management": {
       "title": "Direction",
-      "member": "Shpat Fejzulahu"
+      "member": "Spat Fejzulahu"
     },
     "stats": {
       "since": "Depuis",

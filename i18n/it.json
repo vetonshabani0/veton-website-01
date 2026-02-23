@@ -66,14 +66,23 @@
     "team": {
       "title": "TEAM",
       "members": [
-        "Shpat Fejzulahu",
-        "Yzeir Fejzulahu",
-        "Pajtim Fejzulahu"
+        {
+          "name": "Spat Fejzulahu",
+          "title": "Amministratore Delegato"
+        },
+        {
+          "name": "Uzeir Fejzulahu",
+          "title": "Capocantiere"
+        },
+        {
+          "name": "Pajtim Fejzulahu",
+          "title": "Responsabile trasporti"
+        }
       ]
     },
     "management": {
       "title": "Direzione",
-      "member": "Shpat Fejzulahu"
+      "member": "Spat Fejzulahu"
     },
     "stats": {
       "since": "Dal",
