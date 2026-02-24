@@ -92,8 +92,7 @@ exports.handler = async (event, context) => {
       'courier': 'Kurierdienste',
       'bauschtelle': 'Baustelle',
       'realestate': 'Immobilien',
-      'personnel': 'Vermittlung Personal',
-      'temporaryoffice': 'Temporäres Büro',
+      'personnel': 'Vermittlung Personal & Temporäres Büro',
       'drivers': 'Chauffeur Kategorie B & C',
       'other': 'Sonstiges'
     };

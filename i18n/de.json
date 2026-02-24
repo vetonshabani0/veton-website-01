@@ -17,20 +17,25 @@
     "subtitle": "Ihr Schweizer Partner für Transport, Logistik, Bauunternehmung, Personal Vermittlung und mehr seit 2018.",
     "cta_primary": "Unsere Dienstleistungen",
     "cta_secondary": "Kontakt aufnehmen",
+    "slide1": {
+      "badge": "Zuverlässiger Transport",
+      "title": "Gütertransport",
+      "subtitle": "Zuverlässiger Transport von Waren aller Art – national und international, termingerecht und sicher."
+    },
     "slide2": {
-      "badge": "Schweizweite Abdeckung",
-      "title": "Professionelle Logistiklösungen",
-      "subtitle": "Von der Lagerung bis zur Auslieferung – wir sorgen für einen reibungslosen Ablauf Ihrer Supply Chain."
+      "badge": "Professionelle Logistik",
+      "title": "Logistikdienstleistungen",
+      "subtitle": "Professionelle Logistiklösungen für Ihre Supply Chain, von der Lagerung bis zur Auslieferung."
     },
     "slide3": {
-      "badge": "Ihr Partner",
-      "title": "Umfassende Dienstleistungen",
-      "subtitle": "Transport, Logistik, Immobilien, Personalvermittlung und mehr – alles aus einer Hand."
+      "badge": "Professionelle Baustelle",
+      "title": "Baustelle",
+      "subtitle": "Von der Planung bis zur Ausführung – professionelle Baustellendienstleistungen für alle Ihre Bauprojekte."
     },
     "slide4": {
-      "badge": "Professionelle Baustelle",
-      "title": "Baustelle Dienstleistungen",
-      "subtitle": "Von der Planung bis zur Ausführung – professionelle Baustellendienstleistungen für alle Ihre Bauprojekte."
+      "badge": "Professionelle Vermittlung",
+      "title": "Personal Vermittlung & Temporäres Büro",
+      "subtitle": "Professionelle Personalvermittlung für alle Branchen und flexible Bürolösungen für temporäre Projekte – alles aus einer Hand."
     },
     "slider": {
       "prev": "Vorheriges Bild",
@@ -244,16 +249,20 @@
         ]
       },
       "personnel": {
-        "title": "Vermittlung Personal",
-        "description": "Professionelle Personalvermittlung für alle Branchen – qualifizierte Fachkräfte schnell und zuverlässig.",
-        "page_title": "Vermittlung Personal – Helvetic Dynamics AG",
-        "page_description": "Professionelle Personalvermittlung für alle Branchen. Qualifizierte Fachkräfte schnell und zuverlässig.",
-        "details": "Wir vermitteln qualifiziertes Personal für alle Branchen und Anforderungen. Von Fachkräften bis zu Spezialisten – wir finden die richtigen Mitarbeiter für Ihr Unternehmen.",
+        "title": "Vermittlung Personal & Temporäres Büro",
+        "description": "Professionelle Personalvermittlung für alle Branchen und flexible Bürolösungen für temporäre Projekte – alles aus einer Hand.",
+        "page_title": "Vermittlung Personal & Temporäres Büro – Helvetic Dynamics AG",
+        "page_description": "Professionelle Personalvermittlung für alle Branchen und flexible Bürolösungen für temporäre Projekte. Qualifizierte Fachkräfte und voll ausgestattete Büroräume.",
+        "details": "Wir vermitteln qualifiziertes Personal für alle Branchen und Anforderungen. Von Fachkräften bis zu Spezialisten – wir finden die richtigen Mitarbeiter für Ihr Unternehmen. Zusätzlich bieten wir flexible Bürolösungen für temporäre Projekte und kurzfristige Bedürfnisse. Voll ausgestattete Büroräume, Meeting-Räume und Coworking-Spaces stehen Ihnen zur Verfügung.",
         "features": [
           "Personalvermittlung für alle Branchen",
           "Qualifizierte Fachkräfte",
           "Schnelle Vermittlung",
           "Lang- und kurzfristige Einsätze",
+          "Voll ausgestattete Büroräume",
+          "Meeting- und Konferenzräume",
+          "Coworking-Spaces",
+          "Flexible Mietdauer",
           "Individuelle Betreuung"
         ]
       },

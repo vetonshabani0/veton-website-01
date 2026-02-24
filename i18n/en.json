@@ -17,20 +17,25 @@
     "subtitle": "Your Swiss partner for Transport, Logistics, Construction Company, Personnel Placement and more since 2018.",
     "cta_primary": "Our Services",
     "cta_secondary": "Get in Touch",
+    "slide1": {
+      "badge": "Reliable Transport",
+      "title": "Freight Transport",
+      "subtitle": "Reliable transport of goods of all kinds – national and international, on time and secure."
+    },
     "slide2": {
-      "badge": "Switzerland-wide Coverage",
-      "title": "Professional Logistics Solutions",
-      "subtitle": "From storage to delivery – we ensure a smooth flow of your supply chain."
+      "badge": "Professional Logistics",
+      "title": "Logistics Services",
+      "subtitle": "Professional logistics solutions for your supply chain, from storage to delivery."
     },
     "slide3": {
-      "badge": "Your Partner",
-      "title": "Comprehensive Services",
-      "subtitle": "Transport, logistics, real estate, personnel placement and more – all from one source."
+      "badge": "Professional Construction Site",
+      "title": "Construction Site",
+      "subtitle": "From planning to execution – professional construction site services for all your construction projects."
     },
     "slide4": {
-      "badge": "Professional Construction Site",
-      "title": "Construction Site Services",
-      "subtitle": "From planning to execution – professional construction site services for all your construction projects."
+      "badge": "Professional Placement",
+      "title": "Personnel Placement & Temporary Office",
+      "subtitle": "Professional personnel placement for all industries and flexible office solutions for temporary projects – all from one source."
     },
     "slider": {
       "prev": "Previous Image",
@@ -244,16 +249,20 @@
         ]
       },
       "personnel": {
-        "title": "Personnel Placement",
-        "description": "Professional personnel placement for all industries – qualified professionals quickly and reliably.",
-        "page_title": "Personnel Placement – Helvetic Dynamics AG",
-        "page_description": "Professional personnel placement for all industries. Qualified professionals quickly and reliably.",
-        "details": "We place qualified personnel for all industries and requirements. From skilled workers to specialists – we find the right employees for your company.",
+        "title": "Personnel Placement & Temporary Office",
+        "description": "Professional personnel placement for all industries and flexible office solutions for temporary projects – all from one source.",
+        "page_title": "Personnel Placement & Temporary Office – Helvetic Dynamics AG",
+        "page_description": "Professional personnel placement for all industries and flexible office solutions for temporary projects. Qualified professionals and fully equipped office spaces.",
+        "details": "We place qualified personnel for all industries and requirements. From skilled workers to specialists – we find the right employees for your company. Additionally, we offer flexible office solutions for temporary projects and short-term needs. Fully equipped office spaces, meeting rooms and coworking spaces are available.",
         "features": [
           "Personnel placement for all industries",
           "Qualified professionals",
           "Quick placement",
           "Long and short-term assignments",
+          "Fully equipped office spaces",
+          "Meeting and conference rooms",
+          "Coworking spaces",
+          "Flexible rental period",
           "Individual support"
         ]
       },

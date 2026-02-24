@@ -17,20 +17,25 @@
     "subtitle": "Il vostro partner svizzero per Trasporto, Logistica, Impresa di Costruzioni, Collocamento Personale e più dal 2018.",
     "cta_primary": "I Nostri Servizi",
     "cta_secondary": "Contattaci",
+    "slide1": {
+      "badge": "Trasporto Affidabile",
+      "title": "Trasporto Merci",
+      "subtitle": "Trasporto affidabile di merci di tutti i tipi – nazionale e internazionale, puntuale e sicuro."
+    },
     "slide2": {
-      "badge": "Copertura in Tutta la Svizzera",
-      "title": "Soluzioni Logistiche Professionali",
-      "subtitle": "Dallo stoccaggio alla consegna – garantiamo un flusso regolare della vostra catena di approvvigionamento."
+      "badge": "Logistica Professionale",
+      "title": "Servizi Logistici",
+      "subtitle": "Soluzioni logistiche professionali per la vostra catena di approvvigionamento, dallo stoccaggio alla consegna."
     },
     "slide3": {
-      "badge": "Il Vostro Partner",
-      "title": "Servizi Completi",
-      "subtitle": "Trasporto, logistica, immobiliare, collocamento personale e più – tutto da una sola fonte."
+      "badge": "Cantiere Professionale",
+      "title": "Cantiere",
+      "subtitle": "Dalla pianificazione all'esecuzione – servizi professionali di cantiere per tutti i vostri progetti di costruzione."
     },
     "slide4": {
-      "badge": "Cantiere Professionale",
-      "title": "Servizi di Cantiere",
-      "subtitle": "Dalla pianificazione all'esecuzione – servizi professionali di cantiere per tutti i vostri progetti di costruzione."
+      "badge": "Collocamento Professionale",
+      "title": "Collocamento Personale & Ufficio Temporaneo",
+      "subtitle": "Collocamento professionale di personale per tutti i settori e soluzioni d'ufficio flessibili per progetti temporanei – tutto da una sola fonte."
     },
     "slider": {
       "prev": "Immagine Precedente",
@@ -244,16 +249,20 @@
         ]
       },
       "personnel": {
-        "title": "Collocamento Personale",
-        "description": "Collocamento professionale di personale per tutti i settori – professionisti qualificati rapidamente e in modo affidabile.",
-        "page_title": "Collocamento Personale – Helvetic Dynamics AG",
-        "page_description": "Collocamento professionale di personale per tutti i settori. Professionisti qualificati rapidamente e in modo affidabile.",
-        "details": "Collochiamo personale qualificato per tutti i settori e esigenze. Da lavoratori qualificati a specialisti – troviamo i dipendenti giusti per la vostra azienda.",
+        "title": "Collocamento Personale & Ufficio Temporaneo",
+        "description": "Collocamento professionale di personale per tutti i settori e soluzioni d'ufficio flessibili per progetti temporanei – tutto da una sola fonte.",
+        "page_title": "Collocamento Personale & Ufficio Temporaneo – Helvetic Dynamics AG",
+        "page_description": "Collocamento professionale di personale per tutti i settori e soluzioni d'ufficio flessibili per progetti temporanei. Professionisti qualificati e spazi d'ufficio completamente attrezzati.",
+        "details": "Collochiamo personale qualificato per tutti i settori e esigenze. Da lavoratori qualificati a specialisti – troviamo i dipendenti giusti per la vostra azienda. Inoltre, offriamo soluzioni d'ufficio flessibili per progetti temporanei e esigenze a breve termine. Spazi d'ufficio completamente attrezzati, sale riunioni e spazi coworking disponibili.",
         "features": [
           "Collocamento personale per tutti i settori",
           "Professionisti qualificati",
           "Collocamento rapido",
           "Incarichi a lungo e breve termine",
+          "Spazi d'ufficio completamente attrezzati",
+          "Sale riunioni e conferenze",
+          "Spazi coworking",
+          "Durata affitto flessibile",
           "Supporto individuale"
         ]
       },

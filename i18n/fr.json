@@ -17,20 +17,25 @@
     "subtitle": "Votre partenaire suisse pour Transport, Logistique, Entreprise de Construction, Placement de Personnel et plus depuis 2018.",
     "cta_primary": "Nos Services",
     "cta_secondary": "Nous Contacter",
+    "slide1": {
+      "badge": "Transport Fiable",
+      "title": "Transport de Marchandises",
+      "subtitle": "Transport fiable de marchandises de tous types – national et international, ponctuel et sécurisé."
+    },
     "slide2": {
-      "badge": "Couverture Toute la Suisse",
-      "title": "Solutions Logistiques Professionnelles",
-      "subtitle": "Du stockage à la livraison – nous assurons un flux fluide de votre chaîne d'approvisionnement."
+      "badge": "Logistique Professionnelle",
+      "title": "Services Logistiques",
+      "subtitle": "Solutions logistiques professionnelles pour votre chaîne d'approvisionnement, du stockage à la livraison."
     },
     "slide3": {
-      "badge": "Votre Partenaire",
-      "title": "Services Complets",
-      "subtitle": "Transport, logistique, immobilier, placement de personnel et plus – tout d'une seule source."
+      "badge": "Chantier Professionnel",
+      "title": "Chantier",
+      "subtitle": "De la planification à l'exécution – services professionnels de chantier pour tous vos projets de construction."
     },
     "slide4": {
-      "badge": "Chantier Professionnel",
-      "title": "Services de Chantier",
-      "subtitle": "De la planification à l'exécution – services professionnels de chantier pour tous vos projets de construction."
+      "badge": "Placement Professionnel",
+      "title": "Placement de Personnel & Bureau Temporaire",
+      "subtitle": "Placement professionnel de personnel pour tous les secteurs et solutions de bureau flexibles pour projets temporaires – tout d'une seule source."
     },
     "slider": {
       "prev": "Image Précédente",
@@ -244,16 +249,20 @@
         ]
       },
       "personnel": {
-        "title": "Placement de Personnel",
-        "description": "Placement professionnel de personnel pour tous les secteurs – professionnels qualifiés rapidement et de manière fiable.",
-        "page_title": "Placement de Personnel – Helvetic Dynamics AG",
-        "page_description": "Placement professionnel de personnel pour tous les secteurs. Professionnels qualifiés rapidement et de manière fiable.",
-        "details": "Nous plaçons du personnel qualifié pour tous les secteurs et besoins. Des travailleurs qualifiés aux spécialistes – nous trouvons les bons employés pour votre entreprise.",
+        "title": "Placement de Personnel & Bureau Temporaire",
+        "description": "Placement professionnel de personnel pour tous les secteurs et solutions de bureau flexibles pour projets temporaires – tout d'une seule source.",
+        "page_title": "Placement de Personnel & Bureau Temporaire – Helvetic Dynamics AG",
+        "page_description": "Placement professionnel de personnel pour tous les secteurs et solutions de bureau flexibles pour projets temporaires. Professionnels qualifiés et espaces de bureau entièrement équipés.",
+        "details": "Nous plaçons du personnel qualifié pour tous les secteurs et besoins. Des travailleurs qualifiés aux spécialistes – nous trouvons les bons employés pour votre entreprise. De plus, nous offrons des solutions de bureau flexibles pour projets temporaires et besoins à court terme. Espaces de bureau entièrement équipés, salles de réunion et espaces de coworking disponibles.",
         "features": [
           "Placement de personnel pour tous les secteurs",
           "Professionnels qualifiés",
           "Placement rapide",
           "Missions à long et court terme",
+          "Espaces de bureau entièrement équipés",
+          "Salles de réunion et de conférence",
+          "Espaces de coworking",
+          "Durée de location flexible",
           "Support individuel"
         ]
       },
