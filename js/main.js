@@ -325,8 +325,8 @@ function initContactForm() {
       console.log('Response data:', data);
 
       if (response.ok && data.success) {
-        showFeedback(I18n.t('contact.form.success'), 'success');
-        form.reset();
+    showFeedback(I18n.t('contact.form.success'), 'success');
+    form.reset();
       } else {
         throw new Error(data.error || 'Failed to send email');
       }
