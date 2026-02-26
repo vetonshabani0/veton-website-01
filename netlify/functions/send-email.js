@@ -264,12 +264,19 @@ Diese E-Mail wurde über das Kontaktformular auf helveticdynamics.com gesendet.
     // Check if Resend returned an error
     if (emailData.error) {
       console.error('Resend API error:', emailData.error);
+      
+      // Provide helpful error message for domain verification issues
+      let errorMessage = emailData.error.message || 'Resend API error';
+      if (emailData.error.message && emailData.error.message.includes('can only send testing emails')) {
+        errorMessage = 'Email service is in testing mode. Please set CONTACT_EMAIL environment variable to your verified email address (vetonshabani0@gmail.com) in Netlify, or verify your domain at resend.com/domains to send to any recipient.';
+      }
+      
       return {
         statusCode: 500,
         headers,
         body: JSON.stringify({ 
           error: 'Failed to send email',
-          message: emailData.error.message || 'Resend API error',
+          message: errorMessage,
           details: emailData.error
         })
       };
